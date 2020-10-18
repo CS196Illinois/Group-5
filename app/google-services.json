@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "125693837591",
+    "firebase_url": "https://cs196-project-af7eb.firebaseio.com",
+    "project_id": "cs196-project-af7eb",
+    "storage_bucket": "cs196-project-af7eb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:125693837591:android:3a7efdc8d9fadb62a6b752",
+        "android_client_info": {
+          "package_name": "com.example.mentallysound"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "125693837591-uu0l117fhlh4lbr2klik3k8qvsgrvpqg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mentallysound",
+            "certificate_hash": "31bd3374d69050809bb702a63edc0041a2be4989"
+          }
+        },
+        {
+          "client_id": "125693837591-pke4icv7tenc8rca2sd7phn1p8aeqqai.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSabknin5h3lQ0mKz4MVA7PlwpIg8mXxM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "125693837591-pke4icv7tenc8rca2sd7phn1p8aeqqai.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
