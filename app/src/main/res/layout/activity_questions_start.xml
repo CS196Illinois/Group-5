@@ -34,7 +34,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/continueStart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="200dp"

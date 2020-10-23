@@ -88,7 +88,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/signInButton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="90dp"
@@ -110,7 +110,7 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/signInButton2" />
 
     <Button
         android:id="@+id/signUpButton"

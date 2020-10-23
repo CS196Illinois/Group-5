@@ -7,20 +7,19 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class QuestionsStart extends AppCompatActivity {
-
-    public Button continueStart;
+public class Question1 extends AppCompatActivity {
+    public Button meh;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_questions_start);
+        setContentView(R.layout.activity_question1);
 
-        continueStart = (Button) findViewById(R.id.continueStart);
+        meh = (Button) findViewById(R.id.meh);
 
-        continueStart.setOnClickListener(new View.OnClickListener() {
+        meh.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(QuestionsStart.this, Question1.class);
+                Intent intent = new Intent(Question1.this, MainActivity.class);
                 startActivity(intent);
             }
         });

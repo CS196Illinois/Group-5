@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#213F8B"
+    tools:context=".Question1">
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="350dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="How are you feeling right now?"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="313dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:max="5"
+        android:progress="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/happy"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginLeft="75dp"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/happy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/sad"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="75dp"
+        android:layout_marginRight="75dp"
+        android:background="@drawable/sad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/angry"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginLeft="75dp"
+        android:layout_marginBottom="250dp"
+        android:background="@drawable/angry"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/meh"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="75dp"
+        android:layout_marginRight="75dp"
+        android:layout_marginBottom="250dp"
+        android:background="@drawable/meh"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
