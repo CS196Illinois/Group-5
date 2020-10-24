@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#213F8B"
+    android:theme="@style/AppBlue"
     tools:context=".Question1">
 
     <TextView
@@ -41,7 +42,7 @@
         android:layout_height="100dp"
         android:layout_marginStart="75dp"
         android:layout_marginLeft="75dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="150dp"
         android:background="@drawable/happy"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -50,7 +51,7 @@
         android:id="@+id/sad"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="150dp"
         android:layout_marginEnd="75dp"
         android:layout_marginRight="75dp"
         android:background="@drawable/sad"
@@ -63,7 +64,7 @@
         android:layout_height="100dp"
         android:layout_marginStart="75dp"
         android:layout_marginLeft="75dp"
-        android:layout_marginBottom="250dp"
+        android:layout_marginBottom="200dp"
         android:background="@drawable/angry"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -74,7 +75,7 @@
         android:layout_height="100dp"
         android:layout_marginEnd="75dp"
         android:layout_marginRight="75dp"
-        android:layout_marginBottom="250dp"
+        android:layout_marginBottom="200dp"
         android:background="@drawable/meh"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
