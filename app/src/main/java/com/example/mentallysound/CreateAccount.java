@@ -94,25 +94,6 @@ public class CreateAccount extends AppCompatActivity {
                     Intent intent = new Intent (CreateAccount.this, QuestionsStart.class);
                     startActivity(intent);
                 }
-
-                /*
-                user.put("id", 2);
-                user.put("name", name);
-                user.put("email", email);
-                user.put("password", password);
-
-                mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(CreateAccount.this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        Toast.makeText(getApplicationContext(), "account registered", Toast.LENGTH_SHORT).show();;
-                    }
-                });
-
-                // Add a new document with a generated ID
-                db.collection("users").add(user);
-                Intent intent = new Intent (CreateAccount.this, QuestionsStart.class);
-                startActivity(intent);
-                 */
             }
         });
     }

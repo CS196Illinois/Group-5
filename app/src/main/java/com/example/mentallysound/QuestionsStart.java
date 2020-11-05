@@ -7,7 +7,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.Map;
+
 public class QuestionsStart extends AppCompatActivity {
+
+    //simple algo to track mood. this is the simple way out of the two that we discussed
+    //using the Circumplex Model ideally, but linear for now. based on questions, this will change.
+    public static double MoodTracker;
 
     public Button continueStart;
     @Override
