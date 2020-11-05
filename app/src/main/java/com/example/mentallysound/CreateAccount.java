@@ -23,11 +23,20 @@ import com.google.firebase.firestore.proto.TargetGlobal;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class CreateAccount extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     public Button initialSignUp;
+
+    boolean isEmailGood(String emailToCheck) {
+        String expToMatch = "^[a-z0-9](\\.?[a-z0-9]){5,}@g(oogle)?mail\\.com$";
+        Pattern pattern = Pattern.compile(expToMatch, Pattern.CASE_INSENSITIVE);
+        Matcher matcher = pattern.matcher(emailToCheck);
+        return matcher.matches();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +68,11 @@ public class CreateAccount extends AppCompatActivity {
                     new SweetAlertDialog(CreateAccount.this, SweetAlertDialog.ERROR_TYPE)
                             .setTitleText("Confirmation Email...")
                             .setContentText("The two emails you inputted are not the same.")
+                            .show();
+                } else if (!(isEmailGood(email))) {
+                    new SweetAlertDialog(CreateAccount.this, SweetAlertDialog.ERROR_TYPE)
+                            .setTitleText("Email Invalid")
+                            .setContentText("Please enter a valid email address.")
                             .show();
                 } else { //if the emails are the same continue
 
