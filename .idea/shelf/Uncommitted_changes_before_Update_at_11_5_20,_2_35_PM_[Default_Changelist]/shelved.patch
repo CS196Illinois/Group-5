@@ -1,0 +1,136 @@
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    package=\"com.example.mentallysound\">\n\n    <application\n        android:allowBackup=\"true\"\n        android:icon=\"@mipmap/ic_launcher\"\n        android:label=\"@string/app_name\"\n        android:roundIcon=\"@mipmap/ic_launcher_round\"\n        android:supportsRtl=\"true\"\n        android:theme=\"@style/AppTheme\">\n        <activity android:name=\".MusicPlayer\"></activity>\n        <activity android:name=\".MusicBrowser\" />\n        <activity android:name=\".Question1\" />\n        <activity android:name=\".QuestionsStart\" />\n        <activity android:name=\".SignIn\" />\n        <activity android:name=\".CreateAccount\" />\n        <activity android:name=\".MainActivity\">\n            <intent-filter>\n                <action android:name=\"android.intent.action.MAIN\" />\n\n                <category android:name=\"android.intent.category.LAUNCHER\" />\n            </intent-filter>\n        </activity>\n\n        <meta-data\n            android:name=\"preloaded_fonts\"\n            android:resource=\"@array/preloaded_fonts\" />\n    </application>\n\n</manifest>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/AndroidManifest.xml	(revision 1d61834799588f3872251bb72243a7f9be1707b5)
++++ app/src/main/AndroidManifest.xml	(date 1604112291000)
+@@ -9,7 +9,8 @@
+         android:roundIcon="@mipmap/ic_launcher_round"
+         android:supportsRtl="true"
+         android:theme="@style/AppTheme">
+-        <activity android:name=".MusicPlayer"></activity>
++        <activity android:name=".GoogleSignIn"></activity>
++        <activity android:name=".MusicPlayer" />
+         <activity android:name=".MusicBrowser" />
+         <activity android:name=".Question1" />
+         <activity android:name=".QuestionsStart" />
+Index: app/src/main/java/com/example/mentallysound/GoogleSignIn.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/mentallysound/GoogleSignIn.java	(date 1604112889000)
++++ app/src/main/java/com/example/mentallysound/GoogleSignIn.java	(date 1604112889000)
+@@ -0,0 +1,20 @@
++package com.example.mentallysound;
++
++import androidx.appcompat.app.AppCompatActivity;
++
++import android.os.Bundle;
++
++import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
++
++public class GoogleSignIn extends AppCompatActivity {
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.activity_google_sign_in);
++        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
++                .requestEmail()
++                .build();
++        
++    }
++}
+\ No newline at end of file
+Index: app/src/main/java/com/example/mentallysound/CreateAccount.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.mentallysound;\n\nimport androidx.appcompat.app.AppCompatActivity;\n\nimport android.content.Intent;\nimport android.os.Bundle;\nimport android.view.View;\nimport android.widget.Button;\nimport android.widget.EditText;\n\nimport com.google.firebase.firestore.FirebaseFirestore;\n\nimport java.util.HashMap;\nimport java.util.Map;\n\npublic class CreateAccount extends AppCompatActivity {\n\n    public Button initialSignUp;\n    @Override\n    protected void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_create_account);\n\n        initialSignUp = (Button) findViewById(R.id.signUpButton2);\n\n        initialSignUp.setOnClickListener(new View.OnClickListener() {\n            @Override\n            public void onClick(View view) {\n                //initialize an firestore instance connected to \"users\" collection\n                FirebaseFirestore db = FirebaseFirestore.getInstance();\n                //Create a Map of all the data of an user\n                Map<String, Object> user = new HashMap<>();\n                EditText inputName = (EditText) findViewById(R.id.textName);\n                EditText inputEmail = (EditText) findViewById(R.id.textEmail);\n                EditText inputPassword = (EditText) findViewById(R.id.textPassword);\n\n                String name = inputName.getText().toString();\n                String email = inputEmail.getText().toString();\n                String password = inputPassword.getText().toString();\n\n                user.put(\"id\", 2);\n                user.put(\"name\", name);\n                user.put(\"email\", email);\n                user.put(\"password\", password);\n\n                // Add a new document with a generated ID\n                db.collection(\"users\").add(user);\n                Intent intent = new Intent (CreateAccount.this, QuestionsStart.class);\n                startActivity(intent);\n            }\n        });\n    }\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/mentallysound/CreateAccount.java	(revision 1d61834799588f3872251bb72243a7f9be1707b5)
++++ app/src/main/java/com/example/mentallysound/CreateAccount.java	(date 1604604877000)
+@@ -3,12 +3,15 @@
+ import androidx.appcompat.app.AppCompatActivity;
+ 
+ import android.content.Intent;
++import android.nfc.Tag;
+ import android.os.Bundle;
++import android.util.Log;
+ import android.view.View;
+ import android.widget.Button;
+ import android.widget.EditText;
+ 
+ import com.google.firebase.firestore.FirebaseFirestore;
++import com.google.firebase.firestore.proto.TargetGlobal;
+ 
+ import java.util.HashMap;
+ import java.util.Map;
+@@ -16,6 +19,7 @@
+ public class CreateAccount extends AppCompatActivity {
+ 
+     public Button initialSignUp;
++
+     @Override
+     protected void onCreate(Bundle savedInstanceState) {
+         super.onCreate(savedInstanceState);
+Index: app/src/main/res/layout/activity_google_sign_in.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_google_sign_in.xml	(date 1604111755000)
++++ app/src/main/res/layout/activity_google_sign_in.xml	(date 1604111755000)
+@@ -0,0 +1,30 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context=".GoogleSignIn">
++
++    <LinearLayout
++        android:layout_width="match_parent"
++        android:layout_height="match_parent"
++        android:orientation="vertical">
++        <TextView
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:id="@+id/status_textview"
++            android:text="" />
++        <com.google.android.gms.common.SignInButton
++            android:id="@+id/signInButton"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content" />
++        <Button
++            android:layout_width="110dp"
++            android:layout_height="wrap_content"
++            android:text="Sign Out"
++            android:id="@+id/signOutButton" />
++    </LinearLayout>
++
++
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>apply plugin: 'com.android.application'\napply plugin: 'com.google.gms.google-services'\n\nandroid {\n    compileSdkVersion 30\n    buildToolsVersion \"30.0.2\"\n\n    defaultConfig {\n        applicationId \"com.example.mentallysound\"\n        minSdkVersion 16\n        targetSdkVersion 30\n        versionCode 1\n        versionName \"1.0\"\n        multiDexEnabled true\n        testInstrumentationRunner \"androidx.test.runner.AndroidJUnitRunner\"\n    }\n\n    buildTypes {\n        release {\n            minifyEnabled false\n            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'\n        }\n    }\n}\n\ndependencies {\n    implementation platform('com.google.firebase:firebase-bom:26.0.0')\n    implementation fileTree(dir: \"libs\", include: [\"*.jar\"])\n    implementation 'androidx.appcompat:appcompat:1.2.0'\n    implementation 'androidx.constraintlayout:constraintlayout:2.0.2'\n    testImplementation 'junit:junit:4.12'\n    androidTestImplementation 'androidx.test.ext:junit:1.1.2'\n    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'\n    implementation 'com.android.support:multidex:1.0.3'\n    implementation platform('com.google.firebase:firebase-bom:25.12.0')\n    implementation 'com.google.firebase:firebase-analytics'\n    implementation 'com.google.firebase:firebase-firestore'\n    implementation 'com.google.firebase:firebase-auth'\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/build.gradle	(revision 1d61834799588f3872251bb72243a7f9be1707b5)
++++ app/build.gradle	(date 1604112599000)
+@@ -36,4 +36,5 @@
+     implementation 'com.google.firebase:firebase-analytics'
+     implementation 'com.google.firebase:firebase-firestore'
+     implementation 'com.google.firebase:firebase-auth'
++    implementation 'com.google.android.gms:play-services-auth:18.1.0'
+ }
+\ No newline at end of file
