@@ -31,7 +31,8 @@ public class CreateAccount extends AppCompatActivity {
     private FirebaseAuth mAuth;
     public Button initialSignUp;
 
-    boolean isEmailGood(String emailToCheck) {
+    //check to see if the email is valid
+    public static boolean isEmailGood(String emailToCheck) {
         String expToMatch = "^[a-z0-9](\\.?[a-z0-9]){5,}@g(oogle)?mail\\.com$";
         Pattern pattern = Pattern.compile(expToMatch, Pattern.CASE_INSENSITIVE);
         Matcher matcher = pattern.matcher(emailToCheck);
@@ -74,7 +75,7 @@ public class CreateAccount extends AppCompatActivity {
                             .setTitleText("Email Invalid")
                             .setContentText("Please enter a valid email address.")
                             .show();
-                } else { //if the emails are the same continue
+                } else { //if the emails are valid continue
 
                     user.put("id", 2);
                     user.put("name", name);
