@@ -1,0 +1,279 @@
+Index: app/src/main/res/layout/activity_question1.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n    xmlns:tools=\"http://schemas.android.com/tools\"\n    android:layout_width=\"match_parent\"\n    android:layout_height=\"match_parent\"\n    android:background=\"#213F8B\"\n    android:theme=\"@style/AppBlue\"\n    tools:context=\".Question1\">\n\n    <TextView\n        android:id=\"@+id/textView12\"\n        android:layout_width=\"350dp\"\n        android:layout_height=\"150dp\"\n        android:layout_marginTop=\"32dp\"\n        android:fontFamily=\"@font/lato_bold\"\n        android:text=\"How are you feeling right now?\"\n        android:textColor=\"#FFFFFF\"\n        android:textSize=\"30sp\"\n        app:layout_constraintEnd_toEndOf=\"parent\"\n        app:layout_constraintStart_toStartOf=\"parent\"\n        app:layout_constraintTop_toTopOf=\"parent\" />\n\n    <ProgressBar\n        android:id=\"@+id/progressBar\"\n        style=\"?android:attr/progressBarStyleHorizontal\"\n        android:layout_width=\"313dp\"\n        android:layout_height=\"72dp\"\n        android:layout_marginStart=\"30dp\"\n        android:layout_marginLeft=\"30dp\"\n        android:layout_marginEnd=\"30dp\"\n        android:layout_marginRight=\"30dp\"\n        android:max=\"5\"\n        android:progress=\"1\"\n        app:layout_constraintBottom_toBottomOf=\"parent\"\n        app:layout_constraintEnd_toEndOf=\"parent\"\n        app:layout_constraintStart_toStartOf=\"parent\" />\n\n    <Button\n        android:id=\"@+id/happy\"\n        android:layout_width=\"100dp\"\n        android:layout_height=\"100dp\"\n        android:layout_marginStart=\"75dp\"\n        android:layout_marginLeft=\"75dp\"\n        android:layout_marginTop=\"150dp\"\n        android:background=\"@drawable/happy\"\n        app:layout_constraintStart_toStartOf=\"parent\"\n        app:layout_constraintTop_toTopOf=\"parent\" />\n\n    <Button\n        android:id=\"@+id/sad\"\n        android:layout_width=\"100dp\"\n        android:layout_height=\"100dp\"\n        android:layout_marginTop=\"150dp\"\n        android:layout_marginEnd=\"75dp\"\n        android:layout_marginRight=\"75dp\"\n        android:background=\"@drawable/sad\"\n        app:layout_constraintEnd_toEndOf=\"parent\"\n        app:layout_constraintTop_toTopOf=\"parent\" />\n\n    <Button\n        android:id=\"@+id/angry\"\n        android:layout_width=\"100dp\"\n        android:layout_height=\"100dp\"\n        android:layout_marginStart=\"75dp\"\n        android:layout_marginLeft=\"75dp\"\n        android:layout_marginBottom=\"200dp\"\n        android:background=\"@drawable/angry\"\n        app:layout_constraintBottom_toBottomOf=\"parent\"\n        app:layout_constraintStart_toStartOf=\"parent\" />\n\n    <Button\n        android:id=\"@+id/meh\"\n        android:layout_width=\"100dp\"\n        android:layout_height=\"100dp\"\n        android:layout_marginEnd=\"75dp\"\n        android:layout_marginRight=\"75dp\"\n        android:layout_marginBottom=\"200dp\"\n        android:background=\"@drawable/meh\"\n        app:layout_constraintBottom_toBottomOf=\"parent\"\n        app:layout_constraintEnd_toEndOf=\"parent\" />\n\n</androidx.constraintlayout.widget.ConstraintLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_question1.xml	(revision adb68e1e30da9736c68ea7ff1c06eda0d281f8ee)
++++ app/src/main/res/layout/activity_question1.xml	(date 1604682986000)
+@@ -30,7 +30,7 @@
+         android:layout_marginLeft="30dp"
+         android:layout_marginEnd="30dp"
+         android:layout_marginRight="30dp"
+-        android:max="5"
++        android:max="3"
+         android:progress="1"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
+Index: app/src/main/java/com/example/mentallysound/CreateAccount.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.mentallysound;\n\nimport androidx.annotation.NonNull;\nimport androidx.appcompat.app.AppCompatActivity;\n\nimport android.content.Context;\nimport android.content.Intent;\nimport android.content.SharedPreferences;\nimport android.nfc.Tag;\nimport android.os.Bundle;\nimport android.util.Log;\nimport android.view.View;\nimport android.widget.Button;\nimport android.widget.EditText;\nimport android.widget.Toast;\nimport cn.pedant.SweetAlert.SweetAlertDialog;\nimport android.graphics.Color;\nimport com.google.android.gms.tasks.OnCompleteListener;\nimport com.google.android.gms.tasks.Task;\nimport com.google.firebase.auth.AuthResult;\nimport com.google.firebase.auth.FirebaseAuth;\nimport com.google.firebase.auth.FirebaseUser;\nimport com.google.firebase.firestore.FirebaseFirestore;\nimport com.google.firebase.firestore.proto.TargetGlobal;\n\nimport java.util.HashMap;\nimport java.util.Map;\nimport java.util.regex.Matcher;\nimport java.util.regex.Pattern;\n\npublic class CreateAccount extends AppCompatActivity {\n\n    private FirebaseAuth mAuth;\n    public Button initialSignUp;\n    private int idCounter;\n\n    //check to see if the email is valid\n    public static boolean isEmailGood(String emailToCheck) {\n        String expToMatch = \"^[a-z0-9](\\\\.?[a-z0-9]){5,}@g(oogle)?mail\\\\.com$\";\n        Pattern pattern = Pattern.compile(expToMatch, Pattern.CASE_INSENSITIVE);\n        Matcher matcher = pattern.matcher(emailToCheck);\n        return matcher.matches();\n    }\n\n    @Override\n    protected void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_create_account);\n\n        initialSignUp = (Button) findViewById(R.id.signUpButton2);\n\n        initialSignUp.setOnClickListener(new View.OnClickListener() {\n            @Override\n            public void onClick(View view) {\n                //initialize an firestore instance connected to \"users\" collection\n                FirebaseFirestore db = FirebaseFirestore.getInstance();\n\n                //Create a Map of all the data of an user\n                Map<String, Object> user = new HashMap<>();\n                mAuth = FirebaseAuth.getInstance();\n\n                EditText inputName = (EditText) findViewById(R.id.textName);\n                EditText inputEmail = (EditText) findViewById(R.id.textEmail);\n                EditText inputConfirmEmail = (EditText) findViewById(R.id.editTextTextEmailAddress2);\n                EditText inputPassword = (EditText) findViewById(R.id.textPassword);\n\n                String name = inputName.getText().toString();\n                String email = inputEmail.getText().toString();\n                String confirmEmail = inputConfirmEmail.getText().toString();\n                String password = inputPassword.getText().toString();\n\n                //checking to see if the two emails inputted are the same\n                if (!(confirmEmail.equals(email))) {\n                    new SweetAlertDialog(CreateAccount.this, SweetAlertDialog.ERROR_TYPE)\n                            .setTitleText(\"Confirmation Email...\")\n                            .setContentText(\"The two emails you inputted are not the same.\")\n                            .show();\n                } else if (!(isEmailGood(email))) {\n                    new SweetAlertDialog(CreateAccount.this, SweetAlertDialog.ERROR_TYPE)\n                            .setTitleText(\"Email Invalid\")\n                            .setContentText(\"Please enter a valid email address.\")\n                            .show();\n                } else { //if the emails are valid continue\n\n                    user.put(\"id\", 2);\n                    user.put(\"name\", name);\n                    user.put(\"email\", email);\n                    user.put(\"password\", password);\n\n                    mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(CreateAccount.this, new OnCompleteListener<AuthResult>() {\n                        @Override\n                        public void onComplete(@NonNull Task<AuthResult> task) {\n                            Toast.makeText(getApplicationContext(), \"account registered\", Toast.LENGTH_SHORT).show();;\n                        }\n                    });\n\n                    // Add a new document with a generated ID\n                    db.collection(\"users\").add(user);\n                    Intent intent = new Intent (CreateAccount.this, QuestionsStart.class);\n                    startActivity(intent);\n                }\n            }\n        });\n    }\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/mentallysound/CreateAccount.java	(revision adb68e1e30da9736c68ea7ff1c06eda0d281f8ee)
++++ app/src/main/java/com/example/mentallysound/CreateAccount.java	(date 1604682986000)
+@@ -36,7 +36,7 @@
+ 
+     //check to see if the email is valid
+     public static boolean isEmailGood(String emailToCheck) {
+-        String expToMatch = "^[a-z0-9](\\.?[a-z0-9]){5,}@g(oogle)?mail\\.com$";
++        String expToMatch = "^(\\.?[a-z0-9]){5,}@[a-z0-9A-Z]{1,}\\.(com||edu||org||io){1}$";
+         Pattern pattern = Pattern.compile(expToMatch, Pattern.CASE_INSENSITIVE);
+         Matcher matcher = pattern.matcher(emailToCheck);
+         return matcher.matches();
+Index: app/src/main/java/com/example/mentallysound/Question1.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.mentallysound;\n\nimport androidx.appcompat.app.AppCompatActivity;\n\nimport android.content.Intent;\nimport android.os.Bundle;\nimport android.view.View;\nimport android.widget.Button;\n\npublic class Question1 extends AppCompatActivity {\n\n    public Button meh;\n    public Button happy;\n    public Button sad;\n    public Button angry;\n\n    @Override\n    protected void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_question1);\n\n        meh = (Button) findViewById(R.id.meh);\n        happy = (Button) findViewById(R.id.happy);\n        sad = (Button) findViewById(R.id.sad);\n        angry = (Button) findViewById(R.id.angry);\n\n        meh.setOnClickListener(new View.OnClickListener() {\n            @Override\n            public void onClick(View view) {\n                QuestionsStart.MoodTracker += 0;\n                Intent intent = new Intent(Question1.this, MainActivity.class);\n                startActivity(intent);\n            }\n        });\n\n        happy.setOnClickListener(new View.OnClickListener() {\n            @Override\n            public void onClick(View view) {\n                QuestionsStart.MoodTracker += 5;\n                Intent intent = new Intent(Question1.this, MainActivity.class);\n                startActivity(intent);\n            }\n        });\n\n        sad.setOnClickListener(new View.OnClickListener() {\n            @Override\n            public void onClick(View view) {\n                QuestionsStart.MoodTracker += -3.33;\n                Intent intent = new Intent(Question1.this, MainActivity.class);\n                startActivity(intent);\n            }\n        });\n\n        angry.setOnClickListener(new View.OnClickListener() {\n            @Override\n            public void onClick(View view) {\n                QuestionsStart.MoodTracker += -6.66;\n                Intent intent = new Intent(Question1.this, MainActivity.class);\n                startActivity(intent);\n            }\n        });\n    }\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/mentallysound/Question1.java	(revision adb68e1e30da9736c68ea7ff1c06eda0d281f8ee)
++++ app/src/main/java/com/example/mentallysound/Question1.java	(date 1604682986000)
+@@ -28,7 +28,7 @@
+             @Override
+             public void onClick(View view) {
+                 QuestionsStart.MoodTracker += 0;
+-                Intent intent = new Intent(Question1.this, MainActivity.class);
++                Intent intent = new Intent(Question1.this, Question2.class);
+                 startActivity(intent);
+             }
+         });
+@@ -37,7 +37,7 @@
+             @Override
+             public void onClick(View view) {
+                 QuestionsStart.MoodTracker += 5;
+-                Intent intent = new Intent(Question1.this, MainActivity.class);
++                Intent intent = new Intent(Question1.this, Question2.class);
+                 startActivity(intent);
+             }
+         });
+@@ -46,7 +46,7 @@
+             @Override
+             public void onClick(View view) {
+                 QuestionsStart.MoodTracker += -3.33;
+-                Intent intent = new Intent(Question1.this, MainActivity.class);
++                Intent intent = new Intent(Question1.this, Question2.class);
+                 startActivity(intent);
+             }
+         });
+@@ -55,7 +55,7 @@
+             @Override
+             public void onClick(View view) {
+                 QuestionsStart.MoodTracker += -6.66;
+-                Intent intent = new Intent(Question1.this, MainActivity.class);
++                Intent intent = new Intent(Question1.this, Question2.class);
+                 startActivity(intent);
+             }
+         });
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    package=\"com.example.mentallysound\">\n\n    <application\n        android:allowBackup=\"true\"\n        android:icon=\"@mipmap/ic_launcher\"\n        android:label=\"@string/app_name\"\n        android:roundIcon=\"@mipmap/ic_launcher_round\"\n        android:supportsRtl=\"true\"\n        android:theme=\"@style/AppTheme\">\n        <activity android:name=\".MusicPlayer\" />\n        <activity android:name=\".MusicBrowser\" />\n        <activity android:name=\".Question1\" />\n        <activity android:name=\".QuestionsStart\" />\n        <activity android:name=\".SignIn\" />\n        <activity android:name=\".CreateAccount\" />\n        <activity android:name=\".MainActivity\">\n            <intent-filter>\n                <action android:name=\"android.intent.action.MAIN\" />\n\n                <category android:name=\"android.intent.category.LAUNCHER\" />\n            </intent-filter>\n        </activity>\n\n        <meta-data\n            android:name=\"preloaded_fonts\"\n            android:resource=\"@array/preloaded_fonts\" />\n    </application>\n\n</manifest>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/AndroidManifest.xml	(revision adb68e1e30da9736c68ea7ff1c06eda0d281f8ee)
++++ app/src/main/AndroidManifest.xml	(date 1604682986000)
+@@ -9,6 +9,8 @@
+         android:roundIcon="@mipmap/ic_launcher_round"
+         android:supportsRtl="true"
+         android:theme="@style/AppTheme">
++        <activity android:name=".Question3"></activity>
++        <activity android:name=".Question2" />
+         <activity android:name=".MusicPlayer" />
+         <activity android:name=".MusicBrowser" />
+         <activity android:name=".Question1" />
+Index: app/src/main/java/com/example/mentallysound/Question2.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/mentallysound/Question2.java	(date 1604682986000)
++++ app/src/main/java/com/example/mentallysound/Question2.java	(date 1604682986000)
+@@ -0,0 +1,37 @@
++package com.example.mentallysound;
++
++import androidx.appcompat.app.AppCompatActivity;
++
++import android.content.Intent;
++import android.os.Bundle;
++import android.view.View;
++import android.widget.Button;
++
++public class Question2 extends AppCompatActivity {
++    public Button fast;
++    public Button slow;
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.activity_question2);
++
++        fast = (Button) findViewById(R.id.fastButton);
++        slow = (Button) findViewById(R.id.slowButton);
++
++        fast.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
++                Intent intent = new Intent(Question2.this, Question3.class);
++                startActivity(intent);
++            }
++        });
++
++        slow.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
++                Intent intent = new Intent(Question2.this, Question3.class);
++                startActivity(intent);
++            }
++        });
++    }
++}
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_question2.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_question2.xml	(date 1604682986000)
++++ app/src/main/res/layout/activity_question2.xml	(date 1604682986000)
+@@ -0,0 +1,55 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    android:background="#213F8B"
++    tools:context=".Question2">
++
++    <TextView
++        android:id="@+id/textView11"
++        android:layout_width="350dp"
++        android:layout_height="150dp"
++        android:layout_marginTop="32dp"
++        android:fontFamily="@font/lato_bold"
++        android:text="Do you like to listen to fast or slow songs?"
++        android:textColor="#FFFFFF"
++        android:textSize="30sp"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent" />
++
++    <Button
++        android:id="@+id/fastButton"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginStart="75dp"
++        android:layout_marginLeft="75dp"
++        android:text="Fast"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent" />
++
++    <Button
++        android:id="@+id/slowButton"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginEnd="75dp"
++        android:layout_marginRight="75dp"
++        android:text="Slow"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintTop_toTopOf="parent" />
++
++    <ProgressBar
++        android:id="@+id/progressBar2"
++        style="?android:attr/progressBarStyleHorizontal"
++        android:layout_width="313dp"
++        android:layout_height="72dp"
++        android:max="3"
++        android:progress="2"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent" />
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/java/com/example/mentallysound/MusicBrowser.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.mentallysound;\n\nimport androidx.appcompat.app.AppCompatActivity;\n\nimport android.os.Bundle;\n\npublic class MusicBrowser extends AppCompatActivity {\n\n    @Override\n    protected void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_music_browser);\n    }\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/mentallysound/MusicBrowser.java	(revision adb68e1e30da9736c68ea7ff1c06eda0d281f8ee)
++++ app/src/main/java/com/example/mentallysound/MusicBrowser.java	(date 1604682986000)
+@@ -3,6 +3,8 @@
+ import androidx.appcompat.app.AppCompatActivity;
+ 
+ import android.os.Bundle;
++import java.util.Map;
++import java.util.HashMap;
+ 
+ public class MusicBrowser extends AppCompatActivity {
+ 
+Index: app/src/main/res/layout/activity_question3.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_question3.xml	(date 1604682986000)
++++ app/src/main/res/layout/activity_question3.xml	(date 1604682986000)
+@@ -0,0 +1,20 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    android:background="#213F8B"
++    tools:context=".Question3">
++
++    <ProgressBar
++        android:id="@+id/progressBar3"
++        style="?android:attr/progressBarStyleHorizontal"
++        android:layout_width="313dp"
++        android:layout_height="72dp"
++        android:max="3"
++        android:progress="3"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent" />
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/java/com/example/mentallysound/Question3.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/mentallysound/Question3.java	(date 1604682986000)
++++ app/src/main/java/com/example/mentallysound/Question3.java	(date 1604682986000)
+@@ -0,0 +1,14 @@
++package com.example.mentallysound;
++
++import androidx.appcompat.app.AppCompatActivity;
++
++import android.os.Bundle;
++
++public class Question3 extends AppCompatActivity {
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.activity_question3);
++    }
++}
+\ No newline at end of file

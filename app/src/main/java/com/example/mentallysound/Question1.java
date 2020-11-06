@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -18,6 +19,8 @@ public class Question1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question1);
+
+        Log.d("Mood Tracker", String.valueOf(QuestionsStart.MoodTracker));
 
         meh = (Button) findViewById(R.id.meh);
         happy = (Button) findViewById(R.id.happy);
