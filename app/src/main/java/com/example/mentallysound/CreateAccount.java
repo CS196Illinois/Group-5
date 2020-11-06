@@ -3,7 +3,9 @@ package com.example.mentallysound;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.nfc.Tag;
 import android.os.Bundle;
 import android.util.Log;
@@ -30,6 +32,7 @@ public class CreateAccount extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     public Button initialSignUp;
+    private int idCounter;
 
     //check to see if the email is valid
     public static boolean isEmailGood(String emailToCheck) {
@@ -51,9 +54,11 @@ public class CreateAccount extends AppCompatActivity {
             public void onClick(View view) {
                 //initialize an firestore instance connected to "users" collection
                 FirebaseFirestore db = FirebaseFirestore.getInstance();
+
                 //Create a Map of all the data of an user
                 Map<String, Object> user = new HashMap<>();
                 mAuth = FirebaseAuth.getInstance();
+
                 EditText inputName = (EditText) findViewById(R.id.textName);
                 EditText inputEmail = (EditText) findViewById(R.id.textEmail);
                 EditText inputConfirmEmail = (EditText) findViewById(R.id.editTextTextEmailAddress2);
