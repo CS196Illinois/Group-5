@@ -28,7 +28,7 @@ public class Question1 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 QuestionsStart.MoodTracker += 0;
-                Intent intent = new Intent(Question1.this, MainActivity.class);
+                Intent intent = new Intent(Question1.this, Question2.class);
                 startActivity(intent);
             }
         });
@@ -37,7 +37,7 @@ public class Question1 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 QuestionsStart.MoodTracker += 5;
-                Intent intent = new Intent(Question1.this, MainActivity.class);
+                Intent intent = new Intent(Question1.this, Question2.class);
                 startActivity(intent);
             }
         });
@@ -46,7 +46,7 @@ public class Question1 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 QuestionsStart.MoodTracker += -3.33;
-                Intent intent = new Intent(Question1.this, MainActivity.class);
+                Intent intent = new Intent(Question1.this, Question2.class);
                 startActivity(intent);
             }
         });
@@ -55,7 +55,7 @@ public class Question1 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 QuestionsStart.MoodTracker += -6.66;
-                Intent intent = new Intent(Question1.this, MainActivity.class);
+                Intent intent = new Intent(Question1.this, Question2.class);
                 startActivity(intent);
             }
         });
