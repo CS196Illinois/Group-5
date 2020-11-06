@@ -20,7 +20,7 @@ public class Question1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question1);
 
-        Log.d("Mood Tracker", String.valueOf(QuestionsStart.MoodTracker));
+        Log.d("Mood Tracker", "Current mood index: " + String.valueOf(QuestionsStart.MoodTracker));
 
         meh = (Button) findViewById(R.id.meh);
         happy = (Button) findViewById(R.id.happy);

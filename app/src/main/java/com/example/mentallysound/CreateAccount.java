@@ -75,11 +75,20 @@ public class CreateAccount extends AppCompatActivity {
                             .setTitleText("Confirmation Email...")
                             .setContentText("The two emails you inputted are not the same.")
                             .show();
+                    inputConfirmEmail.getText().clear();
                 } else if (!(isEmailGood(email))) {
                     new SweetAlertDialog(CreateAccount.this, SweetAlertDialog.ERROR_TYPE)
                             .setTitleText("Email Invalid")
                             .setContentText("Please enter a valid email address.")
                             .show();
+                    inputEmail.getText().clear();
+                    inputConfirmEmail.getText().clear();
+                } else if (name.trim().equals("")) {
+                    new SweetAlertDialog(CreateAccount.this, SweetAlertDialog.ERROR_TYPE)
+                            .setTitleText("Invalid Name")
+                            .setContentText("Please enter your name.")
+                            .show();
+                    inputName.getText().clear();
                 } else { //if the emails are valid continue
 
                     user.put("id", 2);

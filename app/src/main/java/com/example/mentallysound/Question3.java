@@ -10,7 +10,7 @@ public class Question3 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        Log.d("Mood Tracker", String.valueOf(QuestionsStart.MoodTracker));
+        Log.d("Mood Tracker", "Current mood index: " + String.valueOf(QuestionsStart.MoodTracker));
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question3);

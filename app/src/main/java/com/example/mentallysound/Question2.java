@@ -16,7 +16,7 @@ public class Question2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question2);
 
-        Log.d("Mood Tracker", String.valueOf(QuestionsStart.MoodTracker));
+        Log.d("Mood Tracker", "Current mood index: " + String.valueOf(QuestionsStart.MoodTracker));
 
         fast = (Button) findViewById(R.id.fastButton);
         slow = (Button) findViewById(R.id.slowButton);
