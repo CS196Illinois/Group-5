@@ -22,6 +22,8 @@ public class Question5 extends AppCompatActivity {
         match.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //if they want music that matches their mood, keep value the same
+                QuestionsStart.MoodTracker *= 1;
                 Intent intent = new Intent(Question5.this, AllSet.class);
                 startActivity(intent);
             }
@@ -30,6 +32,8 @@ public class Question5 extends AppCompatActivity {
         oppose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //if they want the opposite of their mood, than negate it
+                QuestionsStart.MoodTracker *= -1;
                 Intent intent = new Intent(Question5.this, AllSet.class);
                 startActivity(intent);
             }
