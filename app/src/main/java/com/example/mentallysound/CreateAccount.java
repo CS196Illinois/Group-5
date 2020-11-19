@@ -50,7 +50,8 @@ public class CreateAccount extends AppCompatActivity {
 
     //check to see if the email is valid
     public static boolean isEmailGood(String emailToCheck) {
-        String expToMatch = "^(\\.?[a-z0-9]){5,}@[a-z0-9A-Z]{1,}\\.(com||edu||org||io){1}$";
+        String expToMatch = "^[a-z0-9](\\.?[a-z0-9]){5,}@g(oogle)?mail\\.com$";
+        //^(\.?[a-z0-9]){5,}@[a-z0-9A-Z]{1,}\.(com||edu||org||io){1}$
         Pattern pattern = Pattern.compile(expToMatch, Pattern.CASE_INSENSITIVE);
         Matcher matcher = pattern.matcher(emailToCheck);
         return matcher.matches();
