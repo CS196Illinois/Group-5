@@ -33,6 +33,7 @@ public class Question4 extends AppCompatActivity {
         happy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                QuestionsStart.MoodTracker += 4;
                 Intent intent = new Intent(Question4.this, MusicBrowser.class);
                 startActivity(intent);
             }
@@ -41,6 +42,7 @@ public class Question4 extends AppCompatActivity {
         sad.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                QuestionsStart.MoodTracker -= 4;
                 Intent intent = new Intent(Question4.this, MusicBrowser.class);
                 startActivity(intent);
             }

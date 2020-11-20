@@ -25,6 +25,7 @@ public class Question2 extends AppCompatActivity {
         meh.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                QuestionsStart.MoodTracker += 0;
                 Intent intent = new Intent(Question2.this, Question3.class);
                 startActivity(intent);
             }
@@ -33,6 +34,8 @@ public class Question2 extends AppCompatActivity {
         happy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //if they are less stressed they wouldn't mind something more energetic
+                QuestionsStart.MoodTracker *= 1.25;
                 Intent intent = new Intent(Question2.this, Question3.class);
                 startActivity(intent);
             }
@@ -41,6 +44,8 @@ public class Question2 extends AppCompatActivity {
         sad.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //if they are more stressed they would want something more calm and neutral
+                QuestionsStart.MoodTracker *= 0.75;
                 Intent intent = new Intent(Question2.this, Question3.class);
                 startActivity(intent);
             }

@@ -31,7 +31,6 @@ public class Question1 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 QuestionsStart.MoodTracker += 0;
-                //QuestionsStart.moodMap.put("normal", QuestionsStart.moodMap.get("normal") + 5);
                 Intent intent = new Intent(Question1.this, Question2.class);
                 startActivity(intent);
             }
