@@ -12,11 +12,13 @@ import java.util.Random;
 public class AllSet extends AppCompatActivity {
 
     public Button startListening;
+
     public String[] genreN5 = new String[] {"Blues", "Acoustic Blues", "African Blues", "Chicago Blues", "Contemporary R&B", "R&B", "Country", "Louisana Blues", "Avant-Garde", "High Classical", "Classical", "Comtemporary Classical", "Modern Composition", "Modern Classical", "Opera", "Oratorio", "Orchestral", "Organum", "Renaissance", "Romantic", "Romantic", "Sonata", "Symphonic"};
     public String[] genre10 = new String[] {"Pop", "New Wave", "Novelty", "Hip Hop", "Rap", "Country Pop", "Club", "Rock", "Alternative Rock", "Deep House", "Dubstep", "Electroswing", "Garage", "Glitch Hop", "Happy Hardcore", "Rave", "Dance-Rock", "German Pop", "Alternative Rap", "New Jersey Hip Hop", "Hip Pop", "J-Pop"};
     public String[] genre5 = new String[] {"Pop", "Hip Hop", "Rap", "Indie", "Lo-fi", "Contemporary R&B", "R&B", "Expressionist", "Country", "Dance", "Club", "Club Dance", "Minimal", "Uplifting", "Lounge", "Ambient House", "Ambient Techno", "Ambient", "Trip Hop", "Chillwave", "Folk", "Indie Folk", "Hip Pop", "Lyrical Hip Hop", "Holiday", "K-Pop", "J-Pop", "Jazz", "Latin"};
     public String[] genreNorm = new String[] {"Indie", "Lo-fi", "New Wave", "Blues", "Blues", "Acoustic Blues", "African Blues", "Chicago Blues", "Contemporary R&B", "R&B", "West Coast", "Chamber Music", "Minimal", "Modern Classical", "Modern Composition", "Classic", "Country", "Hip Hop", "Progressive", "Breakbeat", "Big Beat", "Deep House", "Garage", "Glitch Pop"};
     public String[] genreN10 = new String[] {"Art Punk", "Alternative Rock", "Britpunk", "College Rock", "Crossover Thrash", "Crust Punk", "Emotional Hardcore", "Experimental Rock", "Folk Punk", "Goth / Gothic Rock", "Grunge", "Hardcore Punk", "Hard Rock", "Indie Rock"};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 

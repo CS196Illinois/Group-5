@@ -148,7 +148,7 @@ public class CreateAccount extends AppCompatActivity {
                             inputConfirmEmail.getText().clear();
                         } else if (result.equals("invalid")) {
                             new SweetAlertDialog(CreateAccount.this, SweetAlertDialog.ERROR_TYPE)
-                                    .setTitleText("Email In Records")
+                                    .setTitleText("Email In Records.")
                                     .setContentText("Please enter a valid email address.")
                                     .show();
                             inputEmail.getText().clear();
@@ -162,8 +162,7 @@ public class CreateAccount extends AppCompatActivity {
                             mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(CreateAccount.this, new OnCompleteListener<AuthResult>() {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
-                                    Toast.makeText(getApplicationContext(), "account registered", Toast.LENGTH_SHORT).show();
-
+                                    Toast.makeText(getApplicationContext(), "Account Registered", Toast.LENGTH_SHORT).show();
                                 }
                             });
 
