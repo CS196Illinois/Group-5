@@ -44,9 +44,8 @@ public class CreateAccount extends AppCompatActivity {
         }
     }
 
-    private FirebaseAuth mAuth;
+    FirebaseAuth mAuth;
     public Button initialSignUp;
-    private int idCounter;
 
     //check to see if the email is valid
     public static boolean isEmailGood(String emailToCheck) {
@@ -93,6 +92,13 @@ public class CreateAccount extends AppCompatActivity {
 
         initialSignUp = (Button) findViewById(R.id.signUpButton2);
 
+        //if the user is already signed in.
+        /*
+        if (mAuth.getCurrentUser() != null) {
+            Intent intent = new Intent(CreateAccount.this, QuestionsStart.class);
+            startActivity(intent);
+        }*/
+
         initialSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -111,10 +117,10 @@ public class CreateAccount extends AppCompatActivity {
                 final EditText inputConfirmEmail = (EditText) findViewById(R.id.editTextTextEmailAddress2);
                 final EditText inputPassword = (EditText) findViewById(R.id.textPassword);
 
-                final String name = inputName.getText().toString();
-                final String email = inputEmail.getText().toString();
-                final String confirmEmail = inputConfirmEmail.getText().toString();
-                final String password = inputPassword.getText().toString();
+                final String name = inputName.getText().toString().trim();
+                final String email = inputEmail.getText().toString().trim();
+                final String confirmEmail = inputConfirmEmail.getText().toString().trim();
+                final String password = inputPassword.getText().toString().trim();
 
                 readData(reference, email, new OnCompleteCallback() {
                     @Override
@@ -142,7 +148,7 @@ public class CreateAccount extends AppCompatActivity {
                         } else if (checkEmailInDb.getCheck() == true) {
                             new SweetAlertDialog(CreateAccount.this, SweetAlertDialog.ERROR_TYPE)
                                     .setTitleText("Email In Records")
-                                    .setContentText("Please enter a valid email address.")
+                                    .setContentText("You may already have an account. Try signing in.")
                                     .show();
                             inputEmail.getText().clear();
                             inputConfirmEmail.getText().clear();
