@@ -137,14 +137,36 @@ public class AllSet extends AppCompatActivity {
         map.put("Breakbeat", "spotify:playlist:2Y49JuVf9VWLWfIijSFZmz");
         map.put("Breakbeat Hardcore", "spotify:playlist:1OJpU7wxI4P7QFHhzNUSwg");
         map.put("Breakcore", "spotify:playlist:15PWiNpwy0vFmJIWiStE7M");
-        map.put("Breaks", "spotify:album:1rVha1fzaxdLH81bzjqTph");
-
-
-
-
-
-
-
-
+        map.put("Breaks", "spotify:playlist:0S8VUQb3yrM7VUd2JLBO7p");
+        map.put("Britpop", "spotify:playlist:1rlBSxR4WryLssBr4kiZ77");
+        map.put("Brokenbeat", "spotify:playlist:2b8IUBxy00wteVzPCpiLbn");
+        map.put("Brostep", "spotify:playlist:4e1TfVuPeumCSZoA8KRq48");
+        map.put("Brutal Death Metal", "spotify:playlist:5iZh1symrVbgqWNwXACTZ2");
+        map.put("Breaks", "spotify:playlist:0S8VUQb3yrM7VUd2JLBO7p");
+        map.put("Breaks", "spotify:playlist:0S8VUQb3yrM7VUd2JLBO7p");
+        map.put("Breaks", "spotify:playlist:0S8VUQb3yrM7VUd2JLBO7p");
+        map.put("Breaks", "spotify:playlist:0S8VUQb3yrM7VUd2JLBO7p");
+        map.put("Breaks", "spotify:playlist:0S8VUQb3yrM7VUd2JLBO7p");
+        map.put("Breaks", "spotify:playlist:0S8VUQb3yrM7VUd2JLBO7p");
+        map.put("Breaks", "spotify:playlist:0S8VUQb3yrM7VUd2JLBO7p");
+        map.put("Breaks", "spotify:playlist:0S8VUQb3yrM7VUd2JLBO7p");
+        map.put("Breaks", "spotify:playlist:0S8VUQb3yrM7VUd2JLBO7p");
+        map.put("Breaks", "spotify:playlist:0S8VUQb3yrM7VUd2JLBO7p");
+        map.put("Breaks", "spotify:playlist:0S8VUQb3yrM7VUd2JLBO7p");
+        map.put("Breaks", "spotify:playlist:0S8VUQb3yrM7VUd2JLBO7p");
+        map.put("Breaks", "spotify:playlist:0S8VUQb3yrM7VUd2JLBO7p");
+        map.put("Breaks", "spotify:playlist:0S8VUQb3yrM7VUd2JLBO7p");
+        map.put("Breaks", "spotify:playlist:0S8VUQb3yrM7VUd2JLBO7p");
+        map.put("Breaks", "spotify:playlist:0S8VUQb3yrM7VUd2JLBO7p");
+        map.put("Breaks", "spotify:playlist:0S8VUQb3yrM7VUd2JLBO7p");
+        map.put("Breaks", "spotify:playlist:0S8VUQb3yrM7VUd2JLBO7p");
+        map.put("Breaks", "spotify:playlist:0S8VUQb3yrM7VUd2JLBO7p");
+        map.put("Breaks", "spotify:playlist:0S8VUQb3yrM7VUd2JLBO7p");
+        map.put("Breaks", "spotify:playlist:0S8VUQb3yrM7VUd2JLBO7p");
+        map.put("Breaks", "spotify:playlist:0S8VUQb3yrM7VUd2JLBO7p");
+        map.put("Breaks", "spotify:playlist:0S8VUQb3yrM7VUd2JLBO7p");
+        map.put("Breaks", "spotify:playlist:0S8VUQb3yrM7VUd2JLBO7p");
+        map.put("Breaks", "spotify:playlist:0S8VUQb3yrM7VUd2JLBO7p");
+        map.put("Breaks", "spotify:playlist:0S8VUQb3yrM7VUd2JLBO7p");
     }
 }

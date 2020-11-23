@@ -58,16 +58,16 @@ public class MusicBrowser extends AppCompatActivity {
     }
 
     private void connected() {
-      String playlistURI;
+      String playlistURI = AllSet.music.get("Blues");
         //The base playlist.
-        mSpotifyAppRemote.getPlayerApi().play("spotify:playlist:37i9dQZF1DX2sUQwD7tbmL");
+        mSpotifyAppRemote.getPlayerApi().play(playlistURI);
         // Subscribe to PlayerState
         mSpotifyAppRemote.getPlayerApi()
           .subscribeToPlayerState()
           .setEventCallback(playerState -> {
               final Track track = playerState.track;
               if (track != null) {
-                  Log.d("MainActivity", track.name + " by " + track.artist.name);
+                  Log.d("Music Browser>", track.name + " by " + track.artist.name);
               }
           });
     }
