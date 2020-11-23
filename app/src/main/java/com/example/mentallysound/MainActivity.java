@@ -3,9 +3,11 @@ package com.example.mentallysound;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.content.Intent;
 import android.view.View;
+
 
 import com.google.firebase.FirebaseApp;
 
@@ -14,13 +16,11 @@ public class MainActivity extends AppCompatActivity {
     public Button createAccount;
     public Button signIn;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-
 
         createAccount = (Button) findViewById(R.id.createAccountButton);
         signIn = (Button) findViewById(R.id.signInButton);
@@ -40,10 +40,11 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
-
     }
+
+
+
+
 }
 
 
