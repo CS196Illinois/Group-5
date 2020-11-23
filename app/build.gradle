@@ -38,6 +38,4 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth'
     implementation 'com.google.android.gms:play-services-auth:18.1.0'
     implementation 'com.github.f0ris.sweetalert:library:1.5.6'
-    implementation project(':spotify-app-remote')
-    implementation "com.google.code.gson:gson:2.8.5"
 }
