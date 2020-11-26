@@ -71,7 +71,7 @@ public class AllSet extends AppCompatActivity {
     }
 
     //ignore this, just putting genres with their uri's.
-    //ik there is def a better way of doing this, but i couldnt find a better way lol
+    //there is def a better way of doing this, but i couldnt find a better way lol
     public void fillMusicMap(Map<String, String> map) {
         map.put("Blues", "spotify:playlist:37i9dQZF1DXd9rSDyQguIk");
         map.put("Acoustic Blues", "spotify:playlist:37i9dQZF1DX2iUghHXGIjj");
