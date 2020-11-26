@@ -354,5 +354,47 @@ public class AllSet extends AppCompatActivity {
         map.put("Jazz Fusion", "spotify:playlist:3AGYHZ3tqmPv3Nek1dRv1g");
         map.put("Jazz Rap", "spotify:playlist:37i9dQZF1DX8Kgdykz6OKj");
         map.put("Jazz-Funk", "spotify:playlist:37i9dQZF1DWUb0uBnlJuTi");
+        map.put("Joik", "spotify:playlist:0cZtEkCwL44fZKeTyyKYul");
+        map.put("Jungle", "spotify:playlist:0ib9ehQcBIGYqOCU9NLG3r");
+        map.put("K-Pop", "spotify:playlist:3ZdSe8w9NiQD7HEfopLm6s");
+        map.put("Kawaii Metal", "spotify:playlist:658k8GMyBVGppLuC1Uaf18");
+        map.put("Kayokyoku", "spotify:playlist:2tuj056xQClFI0YZpN7gnO");
+        map.put("Kizomba", "spotify:playlist:6ofDyMnVdUqRcFUPYMxC8q");
+        map.put("Klezmer", "spotify:playlist:3QyVmfHUatn9SHTo8HZvE4");
+        map.put("Krautrock", "spotify:playlist:3aJUBDcbxvKqxWYsNSRt1M");
+        map.put("Latin", "spotify:playlist:7vI0tN3yUn07dkK9T6p2pg");
+        map.put("Latin Jazz", "spotify:playlist:37i9dQZF1DX661EjJOj3Tu");
+        map.put("Latin Pop", "spotify:playlist:2kKzN3kRYDzBctlaWs7CP2");
+        map.put("Latin Rock", "spotify:playlist:56xmLQEhImVw6ArBfiV6M1");
+        map.put("Leftfield", "spotify:playlist:7rM48eZjlwXNAulxn0CijQ");
+        map.put("Line dance", "spotify:playlist:6FTdGkHkgbsVD6rremhqA4");
+        map.put("Lo-fi", "spotify:playlist:37i9dQZF1DWWQRwui0ExPn");
+        map.put("Lo-fi Hip Hop", "spotify:playlist:0vvXsWCC9xrXsKd4FyS8kM");
+        map.put("Lounge", "spotify:playlist:6P98cP6nMIlk4AWB4wPMJf");
+        map.put("Lovers Rock", "spotify:playlist:65OBENZlHc6iz4JZCjjVbS");
+        map.put("Luk Krung", "spotify:playlist:5PvkWa5FPuzjj8S0Wz4RZP");
+        map.put("Luk Thung", "spotify:playlist:7qKLlcKPF6Agveaz547yr8");
+        map.put("Madchester", "spotify:playlist:3NzyOUejNH37GnM15DjDh3");
+        map.put("Mainstream Rock", "spotify:playlist:7qHqwTyF3ZRxekKs60hw3f");
+        map.put("Maloya", "spotify:playlist:25bnmWrZPdYu7gvcHsQoKs");
+        map.put("Mambo", "spotify:playlist:7kI7rA9v5pyi1FEPJQMzfD");
+        map.put("Mandopop", "spotify:playlist:37i9dQZF1DXahjk49z40fT");
+        map.put("Martial Industrial", "spotify:playlist:04CF8vJ7Ujcn8ovD4UMGhY");
+        map.put("Maskanda", "spotify:playlist:2GS6kUl6w29jmchBOmTyn9");
+        map.put("Math Rock", "spotify:playlist:4TI52y8ILsaz1ae9DjS9ns");
+        map.put("Mathcore", "spotify:playlist:5IDUlMJWipaLZ8NZmaPB8E");
+        map.put("Medieval", "spotify:playlist:2YIdQoOgxs0V7uHUdtwCLL");
+        map.put("Melodic Black Metal", "spotify:playlist:61yilIg0cPykhuhkkuUyMo");
+        map.put("Melodic Death Metal", "spotify:playlist:1tHYwCxSH8z2lTVkppX8n2");
+        map.put("Melodic Metalcore", "spotify:playlist:54lNJU6qTUtMLKKoQ5rw6o");
+        map.put("Melodic Rock", "spotify:playlist:2SODrzN47xcQXajLpfwZnQ");
+        map.put("Melodic Trance", "spotify:playlist:03JQeIhJa8jiLYLmwL7mBT");
+        map.put("Mento", "spotify:playlist:1IiCwlPlj1g4ICD4bHsAvG");
+        map.put("Merengue", "spotify:playlist:64xuAv7kLBZOrY0eP0n5mP");
+        map.put("Metal", "spotify:playlist:37i9dQZF1DXbj9Ksq4BAdj");
+        map.put("Metalcore", "spotify:playlist:79QHayucQm6M4wUlUbhQNQ");
+        map.put("Miami Bass", "spotify:playlist:4dxEgJnPkOynGeQOqX7ar6");
+        map.put("Microhouse", "spotify:playlist:6FbDQuTcGT0IoZCtsbCISv");
+
     }
 }

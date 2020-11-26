@@ -59,7 +59,7 @@ public class MusicBrowser extends AppCompatActivity {
 
     private void connected() {
       //dummy uri for now.
-      String playlistURI = "spotify:playlist:37i9dQZF1DX2sUQwD7tbmL";
+      String playlistURI = "spotify:playlist:0FAb3s3yJArWnikZbEOO9p";
       mSpotifyAppRemote.getPlayerApi().play(playlistURI);
       // Subscribe to PlayerState
       mSpotifyAppRemote.getPlayerApi()
