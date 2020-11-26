@@ -58,6 +58,7 @@ public class MusicBrowser extends AppCompatActivity {
     }
 
     private void connected() {
+
       //dummy uri for now.
       String playlistURI = "spotify:playlist:0FAb3s3yJArWnikZbEOO9p";
       mSpotifyAppRemote.getPlayerApi().play(playlistURI);
@@ -67,7 +68,7 @@ public class MusicBrowser extends AppCompatActivity {
         .setEventCallback(playerState -> {
           final Track track = playerState.track;
           if (track != null) {
-            Log.d("Music Browser>", track.name + " by " + track.artist.name);
+            Log.d("Music Browser", track.name + " by " + track.artist.name);
           }
         });
     }

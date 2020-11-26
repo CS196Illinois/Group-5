@@ -395,6 +395,60 @@ public class AllSet extends AppCompatActivity {
         map.put("Metalcore", "spotify:playlist:79QHayucQm6M4wUlUbhQNQ");
         map.put("Miami Bass", "spotify:playlist:4dxEgJnPkOynGeQOqX7ar6");
         map.put("Microhouse", "spotify:playlist:6FbDQuTcGT0IoZCtsbCISv");
-
+        map.put("Milonga", "spotify:playlist:37i9dQZF1DXcCT9tm6fRIV");
+        //might need to change
+        map.put("Min'yo", "spotify:playlist:60xGxalMOlEdAvGsy8kdyN");
+        map.put("Mincecore", "spotify:playlist:1icy0kY7RV6Dd3BiO0jmsa");
+        map.put("Minimal", "spotify:playlist:4lTQ7NuDBOlerutHcPl0OG");
+        map.put("Minimal Techno", "spotify:playlist:7Anb1HtKdhvK3Pb1d36f22");
+        map.put("Minimal Wave", "spotify:playlist:1rWMBMuhp3H963mUqjFABI");
+        map.put("Modern Blues", "spotify:playlist:37i9dQZF1DX7Y7BqFok9IQ");
+        map.put("Modern Classical", "spotify:playlist:6RpbpgcOct72SmEKrUaEHd");
+        map.put("Modern Country", "spotify:playlist:2dFTKmitgfqUXACL78Rb1s");
+        map.put("Motown", "spotify:playlist:70M2GdJysbCKToAuZkWw7a");
+        map.put("MPB", "spotify:playlist:7Lw7HvOElzXwf043GXYPlK");
+        map.put("Musical", "spotify:playlist:37i9dQZF1DX3SzuIjjsy97");
+        map.put("Neo Soul", "spotify:playlist:0r5ojPhjqGVq21oQR13UJy");
+        map.put("Neo-Progressive Rock", "spotify:playlist:0wVJ7N4glrdkdnIYkXqMuG");
+        map.put("Neo-Rockabilly", "spotify:playlist:6gzNCSnOItLOUqiOtNptvd");
+        map.put("Neofolk", "spotify:playlist:4slkhHWFmRdmNpzRBswWI7");
+        map.put("Nerdcore", "spotify:playlist:1i6TCylOQ10oOSEqno5YMg");
+        map.put("Neurofunk", "spotify:playlist:7Dx1mjAUeV8ElB5FERajkl");
+        map.put("New Age", "spotify:playlist:4Jm8LcX9B9AcwSn9d1ZpOE");
+        map.put("New Jack Swing", "spotify:playlist:0dmInkymNnOTWvEFamSNzb");
+        map.put("New Romantic", "spotify:playlist:46NBAikQVSevpdAJIr923P");
+        map.put("New Wave", "spotify:playlist:6G1YyVYzXjAbZ32bOLx7Em");
+        map.put("Nightcore", "spotify:playlist:6tUox0LhGWQVgvAp3BGT2A");
+        map.put("No Wave", "spotify:playlist:5ip48U8kJFixBQYp6NJje8");
+        map.put("Noise", "spotify:playlist:1V7RAjYrXWlsKiACmXqxLl");
+        map.put("Noise Pop", "spotify:playlist:79vSZtZGJqNVs3KYInh42V");
+        map.put("Noise Rock", "spotify:playlist:1V7RAjYrXWlsKiACmXqxLl");
+        map.put("Noisecore", "spotify:playlist:4xF67EdvjTbNBrELLpXidp");
+        map.put("Non-music", "spotify:playlist:6Ye9GVCgHFc7vMDFiR6QH2");
+        map.put("Norteno", "spotify:playlist:37i9dQZF1DWZmwe0RTeFj4");
+        map.put("Northern Soul", "spotify:playlist:37i9dQZF1DWUB4Jn6piqKS");
+        map.put("Nu Disco", "spotify:playlist:0KUF6SR96VHkAK1DaKiSU0");
+        map.put("Nu Jazz", "spotify:playlist:4biDlMZ2OCCEV73QTkZGqa");
+        map.put("Nu Metal", "spotify:playlist:37i9dQZF1DXcfZ6moR6J0G");
+        map.put("Nueva Cancion", "spotify:playlist:275lWKA1hb4trLqnjQWYx9");
+        map.put("Occult Rock", "spotify:playlist:17sZgprqbWIU6m5NZUAB15");
+        //might need changing
+        map.put("Oi", "spotify:playlist:6nm5h4HsvQyB85b1Se6w8s");
+        map.put("Old School Death Metal", "spotify:playlist:1X2Z3JRtq3Vwd94ZQ7k6Sf");
+        map.put("Old-time", "spotify:playlist:3jDeMOgQjynSOb5JXcE6ar");
+        map.put("Opera", "spotify:playlist:2PjVPkj4a9kBvQIXaZ6UUt");
+        map.put("Orchestral", "spotify:playlist:4HTbud8g5tLMxAaP1gmtWv");
+        map.put("Outlaw Country", "spotify:playlist:6G7ZJuBDKwjCrk9ftdu82D");
+        map.put("P-Funk", "spotify:playlist:3ZBYo9jFqTTgevdak4vfEG");
+        map.put("Pachanga", "spotify:playlist:4bbKrmeHyCk5PBoZ1MWmWL");
+        map.put("Pagode", "spotify:playlist:37i9dQZF1DXchBFvKSUooB");
+        map.put("Phonk", "spotify:playlist:6nx4VZCuStkId2YiISi7pZ");
+        map.put("Polka", "spotify:playlist:1UVQytf2CAXtpDGh91jYTp");
+        map.put("Pop", "spotify:playlist:6mtYuOxzl58vSGnEDtZ9uB");
+        map.put("Pop Metal", "spotify:playlist:7BIlPLUxduiHzqbf6FBwvy");
+        map.put("Pop Punk", "spotify:playlist:7By5485k7QSRLyDT15bdGB");
+        map.put("Pop Rap", "spotify:playlist:4GbJRuMWmbr1to7F6EbcjZ");
+        map.put("Pop Rock", "spotify:playlist:4l7qxiQpxDOaby1aKlteQr");
+        map.put("Pop Soul", "spotify:playlist:37i9dQZF1DX7eEfahN5cwF");
     }
 }
