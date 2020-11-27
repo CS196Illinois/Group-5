@@ -45,7 +45,7 @@
         app:layout_constraintTop_toTopOf="@+id/songTitle" />
 
     <ProgressBar
-        android:id="@+id/progressBar3"
+        android:id="@+id/songDuration"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="291dp"
         android:layout_height="21dp"

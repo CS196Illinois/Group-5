@@ -3,8 +3,10 @@ package com.example.mentallysound;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.spotify.android.appremote.api.ConnectionParams;
@@ -24,6 +26,10 @@ public class MusicBrowser extends AppCompatActivity {
 
     public TextView songTitle;
     public TextView artistName;
+    public ProgressBar songDuration;
+
+    private int progressStatus = 0;
+    private Handler handler = new Handler();
 
   @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +38,7 @@ public class MusicBrowser extends AppCompatActivity {
 
         songTitle = (TextView) findViewById(R.id.songTitle);
         artistName = (TextView) findViewById(R.id.artist);
+        songDuration = (ProgressBar) findViewById(R.id.songDuration);
     }
 
     @Override
@@ -68,7 +75,9 @@ public class MusicBrowser extends AppCompatActivity {
     private void connected() {
       //dummy uri for now.
       String playlistURI = "spotify:playlist:0FAb3s3yJArWnikZbEOO9p";
+
       mSpotifyAppRemote.getPlayerApi().play(playlistURI);
+
       // Subscribe to PlayerState
       mSpotifyAppRemote.getPlayerApi()
         .subscribeToPlayerState()
@@ -78,6 +87,27 @@ public class MusicBrowser extends AppCompatActivity {
             Log.d("Music Browser", track.name + " by " + track.artist.name);
             songTitle.setText(track.name);
             artistName.setText(track.artist.name);
+            songDuration.setMax((int) (track.duration/1000));
+            songDuration.setProgress(0);
+            Log.d("Music Browser", String.valueOf((int) (track.duration/1000)));
+            new Thread(new Runnable() {
+              @Override
+              public void run() {
+                while (progressStatus < track.duration/1000) {
+                  progressStatus += 1;
+                  handler.post(new Runnable() {
+                    public void run() {
+                      songDuration.setProgress(progressStatus);
+                    }
+                  });
+                  try {
+                    Thread.sleep(1000);
+                  } catch (InterruptedException e) {
+                    e.printStackTrace();
+                  }
+                }
+              }
+            }).start();
           }
         });
     }
