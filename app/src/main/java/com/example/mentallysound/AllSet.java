@@ -17,13 +17,14 @@ public class AllSet extends AppCompatActivity {
 
     //the different genre categories filled with all 500+ genres.
     //+10 is the happiest, and -10 is the saddest/angriest.
-    public String[] genre10 = new String[] {"alternative dance", "alternative folk", "alternative hip hop", "alternative pop", "americana", "art pop", "avant-garde", "avant-garde jazz", "avant-garde pop", "avant-prog", "bhangra", "big band", "big beat", "bounce", "britpop", "bubblegum pop", "chamber pop", "christmas music", "city pop", "club", "comedy", "country pop", "crossover prog", "dance", "dance-pop", "dance-punk", "dancehall", "disco", "doo-wop", "dream pop"};
-    public String[] genre5 = new String[] {"acid house", "acid jazz", "acid rock", "acid techno", "acoustic rock", "alternative hip hop", "alternative rock", "ambient", "ambient dub", "ambient techno", "aor", "art pop", "audiobook", "avant-garde", "avant-garde jazz", "ballad", "barbershop", "boogie rock", "boogie-woogie", "bounce", "chachachá", "chamber pop", "christian rock", "christmas music", "club", "comedy rock", "contemporary folk", "country folk", "country rock", "dance", "dance-punk", "dream pop"};
-    public String[] genreNorm = new String[] {"afoxê", "afrobeat", "alternate country", "alternative punk", "alternative rock", "ambient", "ambient dub", "arena rock", "art punk", "art rock", "audiobook", "avant-garde", "avant-garde jazz", "avant-garde metal", "ballad", "bouce", "broken beat", "carnatic classical", "chillout", "christmas music", "classic country", "classic rock", "classical", "club", "contemporary christian", "contemporary classical", "crust punk", "desert rock", "detroit techno", "downtempo"};
-    public String[] genreN5 = new String[] {"acoustic blues", "alternative metal", "anarcho-punk", "art punk", "art rock", "avant-garde", "avant-garde jazz", "avant-garde metal", "ballad", "bass house", "blackgaze", "blues", "breakbeat", "chicago blues", "classic blues", "classic country", "classic jazz", "classical", "classical crossover", "conscious hip hop", "contemporary classical", "contemporary gospel", "contemporary jazz", "contemporary r&b", "cool jazz", "country blues", "dark ambient", "dark electro", "dark folk", "deep house", "delta blues", "digital hardcore", "dub", "dub techno", "dubstep"};
-    public String[] genreN10 = new String[] {"acoustic blues", "alternative metal", "anarcho-punk", "atmospheric black metal", "beat music", "black metal", "blackened death metal", "blackgaze", "blues", "blues rock", "breakbeat hardcore", "breakcore", "brutal death metal", "chicago blues", "classic blues", "classic jazz", "contemporary gospel", "contemporary jazz", "contemporary r&b", "dark ambient", "dark electro", "dark wave", "death metal", "death-doom metal", "deathcore", "deathgrind", "deathgrind", "deathrock", "doom metal", "dub", "dubstep"};
+    public static String[] genre10 = new String[] {"alternative dance", "alternative folk", "alternative hip hop", "alternative pop", "americana", "art pop", "avant-garde", "avant-garde jazz", "avant-garde pop", "avant-prog", "bhangra", "big band", "big beat", "bounce", "britpop", "bubblegum pop", "chamber pop", "christmas music", "city pop", "club", "comedy", "country pop", "crossover prog", "dance", "dance-pop", "dance-punk", "dancehall", "disco", "doo-wop", "dream pop"};
+    public static String[] genre5 = new String[] {"acid house", "acid jazz", "acid rock", "acid techno", "acoustic rock", "alternative hip hop", "alternative rock", "ambient", "ambient dub", "ambient techno", "aor", "art pop", "audiobook", "avant-garde", "avant-garde jazz", "ballad", "barbershop", "boogie rock", "boogie-woogie", "bounce", "chachachá", "chamber pop", "christian rock", "christmas music", "club", "comedy rock", "contemporary folk", "country folk", "country rock", "dance", "dance-punk", "dream pop"};
+    public static String[] genreNorm = new String[] {"afoxê", "afrobeat", "alternate country", "alternative punk", "alternative rock", "ambient", "ambient dub", "arena rock", "art punk", "art rock", "audiobook", "avant-garde", "avant-garde jazz", "avant-garde metal", "ballad", "bouce", "broken beat", "carnatic classical", "chillout", "christmas music", "classic country", "classic rock", "classical", "club", "contemporary christian", "contemporary classical", "crust punk", "desert rock", "detroit techno", "downtempo"};
+    public static String[] genreN5 = new String[] {"acoustic blues", "alternative metal", "anarcho-punk", "art punk", "art rock", "avant-garde", "avant-garde jazz", "avant-garde metal", "ballad", "bass house", "blackgaze", "blues", "breakbeat", "chicago blues", "classic blues", "classic country", "classic jazz", "classical", "classical crossover", "conscious hip hop", "contemporary classical", "contemporary gospel", "contemporary jazz", "contemporary r&b", "cool jazz", "country blues", "dark ambient", "dark electro", "dark folk", "deep house", "delta blues", "digital hardcore", "dub", "dub techno", "dubstep"};
+    public static String[] genreN10 = new String[] {"acoustic blues", "alternative metal", "anarcho-punk", "atmospheric black metal", "beat music", "black metal", "blackened death metal", "blackgaze", "blues", "blues rock", "breakbeat hardcore", "breakcore", "brutal death metal", "chicago blues", "classic blues", "classic jazz", "contemporary gospel", "contemporary jazz", "contemporary r&b", "dark ambient", "dark electro", "dark wave", "death metal", "death-doom metal", "deathcore", "deathgrind", "deathgrind", "deathrock", "doom metal", "dub", "dubstep"};
 
     public static Map<String, String> music = new HashMap<>();
+    String genre = generateGenre(QuestionsStart.MoodTracker);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +33,7 @@ public class AllSet extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_set);
 
-        generateGenre(QuestionsStart.MoodTracker);
+
         fillMusicMap(music);
 
         startListening.setOnClickListener(new View.OnClickListener() {
@@ -45,32 +46,31 @@ public class AllSet extends AppCompatActivity {
     }
 
     //generates array of top 5 genres in category
-    public String[] generateArray(String[] arr) {
+    public String generateArray(String[] arr) {
         assert arr != null;
         assert arr.length != 0;
-        String[] returned = new String[5];
-        for (int n = 0; n < returned.length; n++) {
-            int random = new Random().nextInt(arr.length);
-            returned[n] = arr[random];
-        }
+        String returned;
+        int random = new Random().nextInt(arr.length);
+        returned = arr[random];
         return returned;
     }
 
     //generates array based on mood
-    public void generateGenre(double num) {
-        String[] genres;
+    public String generateGenre(double num) {
+        String genreToPlay;
         if (num > 10.00) {
             //choose 5 genres of music in the >10 array
-            genres = generateArray(genre10);
+            genreToPlay = generateArray(genre10);
         } else if (num > 5) {
-            genres = generateArray(genre5);
+            genreToPlay = generateArray(genre5);
         } else if (num > -5) {
-            genres = generateArray(genreNorm);
+            genreToPlay = generateArray(genreNorm);
         } else if (num > -10) {
-            genres = generateArray(genreN5);
+            genreToPlay = generateArray(genreN5);
         } else {
-            genres = generateArray(genreN10);
+            genreToPlay = generateArray(genreN10);
         }
+        return genreToPlay;
     }
 
     //ignore this, just putting genres with their uri's.

@@ -17,6 +17,10 @@ import com.spotify.protocol.client.Subscription;
 import com.spotify.protocol.types.PlayerState;
 import com.spotify.protocol.types.Track;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Random;
+
 
 public class MusicBrowser extends AppCompatActivity {
 
@@ -31,6 +35,8 @@ public class MusicBrowser extends AppCompatActivity {
     private int progressStatus = 0;
     private Handler handler = new Handler();
 
+
+
   @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,7 +45,10 @@ public class MusicBrowser extends AppCompatActivity {
         songTitle = (TextView) findViewById(R.id.songTitle);
         artistName = (TextView) findViewById(R.id.artist);
         songDuration = (ProgressBar) findViewById(R.id.songDuration);
+
     }
+
+
 
     @Override
     protected void onStart() {
@@ -66,7 +75,6 @@ public class MusicBrowser extends AppCompatActivity {
               @Override
               public void onFailure(Throwable throwable) {
                   Log.e("MainActivity", throwable.getMessage(), throwable);
-
                   // Something went wrong when attempting to connect! Handle errors here
               }
           });
@@ -74,8 +82,8 @@ public class MusicBrowser extends AppCompatActivity {
 
     private void connected() {
       //dummy uri for now.
-      String playlistURI = "spotify:playlist:0FAb3s3yJArWnikZbEOO9p";
-
+      String playlistURI = AllSet.music.get(AllSet.genreNorm[10]);
+      Log.d("Genre", playlistURI);
       mSpotifyAppRemote.getPlayerApi().play(playlistURI);
 
       // Subscribe to PlayerState
