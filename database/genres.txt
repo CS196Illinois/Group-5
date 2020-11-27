@@ -32,60 +32,60 @@ avant-garde jazz
 avant-garde metal
 avant-garde pop
 avant-prog
-bachata
+bachata //NOT INCLUDED YET
 ballad
 barbershop
-baroque
+baroque //NOT INCLUDED YET
 bass house
 beat music
-bebop
+bebop //NOT INCLUDED YET
 bhangra
 big band
 big beat
 black metal
 blackened death metal
 blackgaze
-blue-eyed soul
-bluegrass
+blue-eyed soul //NOT INCLUDED YET
+bluegrass //NOT INCLUDED YET
 blues
 blues rock
-bolero
-bolero son
-bongo flava
+bolero //NOT INCLUDED YET
+bolero son //NOT INCLUDED YET
+bongo flava //NOT INCLUDED YET
 boogie rock
 boogie-woogie
-boom bap
-bossa nova
+boom bap //NOT INCLUDED YET
+bossa nova //NOT INCLUDED YET
 bounce
 breakbeat
 breakbeat hardcore
 breakcore
-breaks
+breaks //NOT INCLUDED YET
 britpop
 broken beat
-brostep
+brostep //NOT INCLUDED YET
 brutal death metal
 bubblegum pop
-cajun
-calypso
-candombe
-canterbury scene
-cantopop
+cajun //NOT INCLUDED YET
+calypso //NOT INCLUDED YET
+candombe //NOT INCLUDED YET
+canterbury scene //NOT INCLUDED YET
+cantopop //NOT INCLUDED YET
 carnatic classical
-celtic
-celtic punk
+celtic //NOT INCLUDED YET
+celtic punk //NOT INCLUDED YET
 chachachá
 chamber pop
-champeta
-changüí
+champeta //NOT INCLUDED YET
+changüí //NOT INCLUDED YET
 chanson
 chicago blues
 chillout
-chiptune
-chopped and screwed
+chiptune //NOT INCLUDED YET
+chopped and screwed //NOT INCLUDED YET
 christian rock
 christmas music
-chutney
+chutney //NOT INCLUDED YET
 city pop
 classic blues
 classic country
@@ -96,8 +96,8 @@ classical crossover
 club
 comedy
 comedy rock
-compas
-complextro
+compas //NOT INCLUDED YET
+complextro //NOT INCLUDED YET
 conscious hip hop
 contemporary christian
 contemporary classical
@@ -105,26 +105,26 @@ contemporary folk
 contemporary gospel
 contemporary jazz
 contemporary r&b
-contra
+contra //NOT INCLUDED YET
 cool jazz
 country
 country blues
 country folk
 country pop
 country rock
-coupé-décalé
-cowpunk
+coupé-décalé //NOT INCLUDED YET
+cowpunk //NOT INCLUDED YET
 crossover prog
 crust punk
-cumbia
-cumbia villera
-cyberpunk
-d-beat
+cumbia //NOT INCLUDED YET
+cumbia villera //NOT INCLUDED YET
+cyberpunk //NOT INCLUDED YET
+d-beat //NOT INCLUDED YET
 dance
 dance-pop
 dance-punk
 dancehall
-dansband
+dansband //NOT INCLUDED YET
 dark ambient
 dark electro
 dark folk
@@ -136,7 +136,7 @@ deathgrind
 deathrock
 deep house
 delta blues
-descarga
+descarga //NOT INCLUDED YET
 desert rock
 detroit techno
 digital hardcore
@@ -145,13 +145,13 @@ doo-wop
 doom metal
 downtempo
 dream pop
-drill
-drill and bass
-drone
-drum and bass
+drill //NOT INCLUDED YET
+drill and bass //NOT INCLUDED YET
+drone //NOT INCLUDED YET
+drum and bass //NOT INCLUDED YET
 dub
 dub techno
-dubstep
+dubstep //ended here
 dungeon synth
 east coast hip hop
 ebm

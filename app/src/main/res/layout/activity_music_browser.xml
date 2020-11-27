@@ -46,11 +46,11 @@
 
     <ProgressBar
         android:id="@+id/songDuration"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="291dp"
-        android:layout_height="21dp"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="301dp"
+        android:layout_height="14dp"
         android:layout_marginTop="132dp"
-        android:background="@color/colorAccent"
+        android:background="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
