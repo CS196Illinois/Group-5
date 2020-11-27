@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import com.spotify.android.appremote.api.ConnectionParams;
 import com.spotify.android.appremote.api.Connector;
@@ -20,10 +22,16 @@ public class MusicBrowser extends AppCompatActivity {
     private static final String REDIRECT_URI = "http://yoursite.com";
     private SpotifyAppRemote mSpotifyAppRemote;
 
-    @Override
+    public TextView songTitle;
+    public TextView artistName;
+
+  @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_music_browser);
+
+        songTitle = (TextView) findViewById(R.id.songTitle);
+        artistName = (TextView) findViewById(R.id.artist);
     }
 
     @Override
@@ -58,7 +66,6 @@ public class MusicBrowser extends AppCompatActivity {
     }
 
     private void connected() {
-
       //dummy uri for now.
       String playlistURI = "spotify:playlist:0FAb3s3yJArWnikZbEOO9p";
       mSpotifyAppRemote.getPlayerApi().play(playlistURI);
@@ -69,6 +76,8 @@ public class MusicBrowser extends AppCompatActivity {
           final Track track = playerState.track;
           if (track != null) {
             Log.d("Music Browser", track.name + " by " + track.artist.name);
+            songTitle.setText(track.name);
+            artistName.setText(track.artist.name);
           }
         });
     }
