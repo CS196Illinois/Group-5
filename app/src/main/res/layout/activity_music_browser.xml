@@ -9,25 +9,28 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="202dp"
-        android:layout_height="202dp"
+        android:layout_width="232dp"
+        android:layout_height="220dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.44"
-        app:srcCompat="@drawable/happy" />
+        app:srcCompat="@drawable/happy"
+        tools:srcCompat="@drawable/music10" />
 
     <TextView
         android:id="@+id/songTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="226dp"
+        android:layout_width="408dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="216dp"
+        android:gravity="center"
         android:text="Song Placeholder"
         android:textColor="@color/colorAccent"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView" />
 
@@ -60,6 +63,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="132dp"
+        android:gravity="center"
         android:text="Playing: "
         android:textColor="@color/colorAccent"
         android:textSize="24sp"

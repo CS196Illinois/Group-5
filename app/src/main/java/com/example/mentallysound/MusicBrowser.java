@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -31,6 +32,7 @@ public class MusicBrowser extends AppCompatActivity {
     public TextView artistName;
     public ProgressBar songDuration;
     public TextView genrePlaying;
+    public ImageView albumImage;
 
     private int progressStatus = 0;
     private Handler handler = new Handler();
@@ -395,101 +397,101 @@ public class MusicBrowser extends AppCompatActivity {
     map.put("nu disco", "spotify:playlist:0KUF6SR96VHkAK1DaKiSU0");
     map.put("nu jazz", "spotify:playlist:4biDlMZ2OCCEV73QTkZGqa");
     map.put("nu metal", "spotify:playlist:37i9dQZF1DXcfZ6moR6J0G");
-    map.put("Nueva Cancion", "spotify:playlist:275lWKA1hb4trLqnjQWYx9");
-    map.put("Occult Rock", "spotify:playlist:17sZgprqbWIU6m5NZUAB15");
+    map.put("nueva Cancion", "spotify:playlist:275lWKA1hb4trLqnjQWYx9");
+    map.put("occult rock", "spotify:playlist:17sZgprqbWIU6m5NZUAB15");
     //might need changing
-    map.put("Oi", "spotify:playlist:6nm5h4HsvQyB85b1Se6w8s");
-    map.put("Old School Death Metal", "spotify:playlist:1X2Z3JRtq3Vwd94ZQ7k6Sf");
-    map.put("Old-time", "spotify:playlist:3jDeMOgQjynSOb5JXcE6ar");
-    map.put("Opera", "spotify:playlist:2PjVPkj4a9kBvQIXaZ6UUt");
-    map.put("Orchestral", "spotify:playlist:4HTbud8g5tLMxAaP1gmtWv");
-    map.put("Outlaw Country", "spotify:playlist:6G7ZJuBDKwjCrk9ftdu82D");
-    map.put("P-Funk", "spotify:playlist:3ZBYo9jFqTTgevdak4vfEG");
-    map.put("Pachanga", "spotify:playlist:4bbKrmeHyCk5PBoZ1MWmWL");
-    map.put("Pagode", "spotify:playlist:37i9dQZF1DXchBFvKSUooB");
-    map.put("Phonk", "spotify:playlist:6nx4VZCuStkId2YiISi7pZ");
-    map.put("Polka", "spotify:playlist:1UVQytf2CAXtpDGh91jYTp");
-    map.put("Pop", "spotify:playlist:6mtYuOxzl58vSGnEDtZ9uB");
-    map.put("Pop Metal", "spotify:playlist:7BIlPLUxduiHzqbf6FBwvy");
-    map.put("Pop Punk", "spotify:playlist:7By5485k7QSRLyDT15bdGB");
-    map.put("Pop Rap", "spotify:playlist:4GbJRuMWmbr1to7F6EbcjZ");
-    map.put("Pop Rock", "spotify:playlist:4l7qxiQpxDOaby1aKlteQr");
-    map.put("Pop Soul", "spotify:playlist:37i9dQZF1DX7eEfahN5cwF");
-    map.put("Pornogrind", "spotify:playlist:6kOigqG46UsxBFwMsX0ITH");
-    map.put("Post-Bop", "spotify:playlist:38b3oUWLMqcEaJ6puqlnhZ");
-    map.put("Post-Classical", "spotify:playlist:7azXYUCJVQ2R1lyY0sgq84");
-    map.put("Post-Grunge", "spotify:playlist:37i9dQZF1DWVwr24yj95lH");
-    map.put("Post-Hardcore", "spotify:playlist:25xipv7zYC6ovwBJlTCBrI");
-    map.put("Post-Metal", "spotify:playlist:3GHBPKU7UdRzgYicknfIXc");
-    map.put("Post-Punk", "spotify:playlist:01tvqPxen74Nz7TRz7kpSd");
-    map.put("Post-Rock", "spotify:playlist:6MLuasIWQmRkM6qyGIb1uj");
-    map.put("Power Electronics", "spotify:playlist:6cUMJj84Rvc07gSmqWMmKd");
-    map.put("Power Metal", "spotify:playlist:1gxUTHGqYwYka43Mvn2hGZ");
-    map.put("Power Pop", "spotify:playlist:37i9dQZF1DX5W4wuxak2hE");
-    map.put("Powerviolence", "spotify:playlist:4SJlsd4gR9A8DTzRoMrFPl");
-    map.put("Production Music", "spotify:playlist:2zBQDCqS3yaIsaxBUwpnid");
-    map.put("Progressive", "spotify:playlist:4L1MWp0aSM8YEIOOBizPVu");
-    map.put("Progressive Folk", "spotify:playlist:1fBm6Yo1qNQ533FEYBPjtZ");
-    map.put("Progressive House", "spotify:playlist:5CMvAWTlDPdZnkleiTHyyo");
-    map.put("Progressive Metal", "spotify:playlist:37i9dQZF1DX5wgKYQVRARv");
-    map.put("Progressive Rock", "spotify:playlist:5wDPvicN1zmNIqcbK3psT0");
-    map.put("Progressive Trance", "spotify:playlist:0HAkmXptQCY655WDljapXa");
-    map.put("Psy-trance", "spotify:playlist:6bTaXLHYTrjxqtwfNp2q5r");
-    map.put("Psychedelic", "spotify:playlist:5OcDUk5nAum1m6PH8fHslE");
-    map.put("Psychedelic Folk", "spotify:playlist:6tOn5WueO2BlgajE1feBi9");
-    map.put("Psychedelic Pop", "spotify:playlist:1mXIDhdIz15xRBHwU5uDCJ");
-    map.put("Psychedelic Rock", "spotify:playlist:37i9dQZF1DWSDoVybeQisg");
-    map.put("Psychobilly", "spotify:playlist:0H10cZ1mLE6sKy6EeYtbwx");
-    map.put("Psytrance", "spotify:playlist:4dC6qS3rrFcseBiaec70v1");
-    map.put("Punk", "spotify:playlist:37i9dQZF1DXd6tJtr4qeot");
-    map.put("Punk Rock", "spotify:playlist:39sVxPTg7BKwrf2MfgrtcD");
-    map.put("Qawwali", "spotify:playlist:4EtNeMUHkAHV6A0p5lN7tw");
-    map.put("Queercore", "spotify:playlist:37i9dQZF1DXa3ll4rE48Mv");
-    map.put("R&B", "spotify:playlist:4WdOOas9UoL3XjHEs57BTX");
-    map.put("Ragga", "spotify:playlist:6pn0caqhVq5c3NRpvr8hHG");
-    map.put("Ragga Hip-hop", "spotify:playlist:1P4f6pPcQSeuEfw83dU7th");
-    map.put("Ragga Jungle", "spotify:playlist:0V742srw56x8PCuMxK3N4b");
-    map.put("Ragtime", "spotify:playlist:4Dfe6YgDQtGYFSXGQPVy8a");
-    map.put("Raï", "spotify:playlist:37i9dQZF1DXb7WmotStdsj");
-    map.put("Ranchera", "spotify:playlist:523boqZle6pyYJYuAVQtAz");
-    map.put("Rap Rock", "spotify:playlist:6VYEbaLnk6oKFjwHVgsV5R");
-    map.put("Rapcore", "spotify:playlist:1ZfpWJ6Wv8vMemZ87qVFGY");
-    map.put("Rave", "spotify:playlist:3ybZkcoA09pYekp0DIo1OP");
-    map.put("Red Song", "spotify:playlist:1tRiGuJGjvHx1SliU3qOeH");
-    map.put("Reggae", "spotify:playlist:37i9dQZF1DXbSbnqxMTGx9");
-    map.put("Reggaeton", "spotify:playlist:03sDEv7FN58Mb9CJOs1Tgn");
-    map.put("Rhythmic Noise", "spotify:playlist:5hyOzYh3w5wcliJTKhEPiC");
-    map.put("Ritual Ambient", "spotify:playlist:1sJKFhnCYglVaDXtA2y7Ao");
-    map.put("Rock", "spotify:playlist:37i9dQZF1DWXRqgorJj26U");
-    map.put("Rock and Roll", "spotify:playlist:5qNHuEyfs4QHR8NI4oNaxE");
-    map.put("Rockabilly", "spotify:playlist:37i9dQZF1DX0xLQsW8b5Zx");
-    map.put("Rocksteady", "spotify:playlist:37i9dQZF1DXcYHsRTcIw5a");
-    map.put("Romantic Classical", "spotify:playlist:786hH2BXw7n4SNg0MXuAio");
-    map.put("Roots Reggae", "spotify:playlist:53iDeoyHodextygU8wpras");
-    map.put("Rumba", "spotify:playlist:4QeTqdJtrfLLGT9vzqPCSX");
-    map.put("Ryūkōka", "spotify:playlist:5qDufC8I9t3EVumsy0ZRAR");
-    map.put("Salsa", "spotify:playlist:37i9dQZF1DX7SeoIaFyTmA");
-    map.put("Samba", "spotify:playlist:2iiljY2f8tADeNzfQLUDWi");
-    map.put("Schlager", "spotify:playlist:1J2vYkrZaRh9mPoRAiVVmU");
-    map.put("Screamo", "spotify:playlist:37i9dQZF1DX8sGALGjOrTu");
-    map.put("Shibuya-kei", "spotify:playlist:5wuLaZucmCLqdXF7CvsCo2");
-    map.put("Shoegaze", "spotify:playlist:37i9dQZF1DX6ujZpAN0v9r");
-    map.put("Singer-songwriter", "spotify:playlist:37i9dQZF1DWVHi578arQLF");
-    map.put("Ska", "spotify:playlist:6mRRGF4klfgUzbD2ZKOCq0");
-    map.put("Ska Punk", "spotify:playlist:5NmTCJa0Wx4urcsYYEhaaj");
-    map.put("Skacore", "spotify:playlist:5U5GURR1JQnlJKwmnHkWJO");
-    map.put("Slow Waltz", "spotify:playlist:5fI9FCkOfVpJs19hGUwsNv");
-    map.put("Sludge Metal", "spotify:playlist:3kbzqWhOrhZFXME9PpL8dg");
-    map.put("Smooth jazz", "spotify:playlist:37i9dQZF1DXdwTUxmGKrdN");
-    map.put("Smooth soul", "spotify:playlist:4RwKm6R88xEx1ScjWhtByA");
-    map.put("Soca", "spotify:playlist:6ADEIhrQYjvSrvL8Wo9rHK");
-    map.put("Soft Rock", "spotify:playlist:37i9dQZF1DX6xOPeSOGone");
-    map.put("Son Cubano", "spotify:playlist:3DZYs9PjtavyPR5CBj4gB0");
-    map.put("Son Montuno", "spotify:playlist:2myAwVZH0I2Q3Tzvzj0ml7");
-    map.put("Soul", "spotify:playlist:37i9dQZF1DWULEW2RfoSCi");
-    map.put("Soul Jazz", "spotify:playlist:5jBndFJwNAKyLHVjwhDiql");
-    map.put("Southern Rock", "spotify:playlist:1QKiEzhqqKwjsFQWuLPhmw");
-    map.put("Southern Soul", "spotify:playlist:2lFMAUSybNcIKKpf7akny8");
+    map.put("oi", "spotify:playlist:6nm5h4HsvQyB85b1Se6w8s");
+    map.put("old school death metal", "spotify:playlist:1X2Z3JRtq3Vwd94ZQ7k6Sf");
+    map.put("old-time", "spotify:playlist:3jDeMOgQjynSOb5JXcE6ar");
+    map.put("opera", "spotify:playlist:2PjVPkj4a9kBvQIXaZ6UUt");
+    map.put("orchestral", "spotify:playlist:4HTbud8g5tLMxAaP1gmtWv");
+    map.put("outlaw country", "spotify:playlist:6G7ZJuBDKwjCrk9ftdu82D");
+    map.put("p-funk", "spotify:playlist:3ZBYo9jFqTTgevdak4vfEG");
+    map.put("pachanga", "spotify:playlist:4bbKrmeHyCk5PBoZ1MWmWL");
+    map.put("pagode", "spotify:playlist:37i9dQZF1DXchBFvKSUooB");
+    map.put("phonk", "spotify:playlist:6nx4VZCuStkId2YiISi7pZ");
+    map.put("polka", "spotify:playlist:1UVQytf2CAXtpDGh91jYTp");
+    map.put("pop", "spotify:playlist:6mtYuOxzl58vSGnEDtZ9uB");
+    map.put("pop metal", "spotify:playlist:7BIlPLUxduiHzqbf6FBwvy");
+    map.put("pop punk", "spotify:playlist:7By5485k7QSRLyDT15bdGB");
+    map.put("pop rap", "spotify:playlist:4GbJRuMWmbr1to7F6EbcjZ");
+    map.put("pop rock", "spotify:playlist:4l7qxiQpxDOaby1aKlteQr");
+    map.put("pop soul", "spotify:playlist:37i9dQZF1DX7eEfahN5cwF");
+    map.put("pornogrind", "spotify:playlist:6kOigqG46UsxBFwMsX0ITH");
+    map.put("post-bop", "spotify:playlist:38b3oUWLMqcEaJ6puqlnhZ");
+    map.put("post-classical", "spotify:playlist:7azXYUCJVQ2R1lyY0sgq84");
+    map.put("post-grunge", "spotify:playlist:37i9dQZF1DWVwr24yj95lH");
+    map.put("post-hardcore", "spotify:playlist:25xipv7zYC6ovwBJlTCBrI");
+    map.put("post-metal", "spotify:playlist:3GHBPKU7UdRzgYicknfIXc");
+    map.put("post-punk", "spotify:playlist:01tvqPxen74Nz7TRz7kpSd");
+    map.put("post-rock", "spotify:playlist:6MLuasIWQmRkM6qyGIb1uj");
+    map.put("power electronics", "spotify:playlist:6cUMJj84Rvc07gSmqWMmKd");
+    map.put("power metal", "spotify:playlist:1gxUTHGqYwYka43Mvn2hGZ");
+    map.put("power pop", "spotify:playlist:37i9dQZF1DX5W4wuxak2hE");
+    map.put("powerviolence", "spotify:playlist:4SJlsd4gR9A8DTzRoMrFPl");
+    map.put("production music", "spotify:playlist:2zBQDCqS3yaIsaxBUwpnid");
+    map.put("progressive", "spotify:playlist:4L1MWp0aSM8YEIOOBizPVu");
+    map.put("progressive folk", "spotify:playlist:1fBm6Yo1qNQ533FEYBPjtZ");
+    map.put("progressive house", "spotify:playlist:5CMvAWTlDPdZnkleiTHyyo");
+    map.put("Progressive metal", "spotify:playlist:37i9dQZF1DX5wgKYQVRARv");
+    map.put("Progressive rock", "spotify:playlist:5wDPvicN1zmNIqcbK3psT0");
+    map.put("Progressive trance", "spotify:playlist:0HAkmXptQCY655WDljapXa");
+    map.put("psy-trance", "spotify:playlist:6bTaXLHYTrjxqtwfNp2q5r");
+    map.put("psychedelic", "spotify:playlist:5OcDUk5nAum1m6PH8fHslE");
+    map.put("psychedelic folk", "spotify:playlist:6tOn5WueO2BlgajE1feBi9");
+    map.put("psychedelic pop", "spotify:playlist:1mXIDhdIz15xRBHwU5uDCJ");
+    map.put("psychedelic rock", "spotify:playlist:37i9dQZF1DWSDoVybeQisg");
+    map.put("psychobilly", "spotify:playlist:0H10cZ1mLE6sKy6EeYtbwx");
+    map.put("psytrance", "spotify:playlist:4dC6qS3rrFcseBiaec70v1");
+    map.put("punk", "spotify:playlist:37i9dQZF1DXd6tJtr4qeot");
+    map.put("punk rock", "spotify:playlist:39sVxPTg7BKwrf2MfgrtcD");
+    map.put("qawwali", "spotify:playlist:4EtNeMUHkAHV6A0p5lN7tw");
+    map.put("queercore", "spotify:playlist:37i9dQZF1DXa3ll4rE48Mv");
+    map.put("r&b", "spotify:playlist:4WdOOas9UoL3XjHEs57BTX");
+    map.put("ragga", "spotify:playlist:6pn0caqhVq5c3NRpvr8hHG");
+    map.put("ragga hip-hop", "spotify:playlist:1P4f6pPcQSeuEfw83dU7th");
+    map.put("ragga jungle", "spotify:playlist:0V742srw56x8PCuMxK3N4b");
+    map.put("ragtime", "spotify:playlist:4Dfe6YgDQtGYFSXGQPVy8a");
+    map.put("raï", "spotify:playlist:37i9dQZF1DXb7WmotStdsj");
+    map.put("ranchera", "spotify:playlist:523boqZle6pyYJYuAVQtAz");
+    map.put("rap rock", "spotify:playlist:6VYEbaLnk6oKFjwHVgsV5R");
+    map.put("rapcore", "spotify:playlist:1ZfpWJ6Wv8vMemZ87qVFGY");
+    map.put("rave", "spotify:playlist:3ybZkcoA09pYekp0DIo1OP");
+    map.put("red song", "spotify:playlist:1tRiGuJGjvHx1SliU3qOeH");
+    map.put("reggae", "spotify:playlist:37i9dQZF1DXbSbnqxMTGx9");
+    map.put("reggaeton", "spotify:playlist:03sDEv7FN58Mb9CJOs1Tgn");
+    map.put("rhythmic noise", "spotify:playlist:5hyOzYh3w5wcliJTKhEPiC");
+    map.put("ritual ambient", "spotify:playlist:1sJKFhnCYglVaDXtA2y7Ao");
+    map.put("rock", "spotify:playlist:37i9dQZF1DWXRqgorJj26U");
+    map.put("rock and roll", "spotify:playlist:5qNHuEyfs4QHR8NI4oNaxE");
+    map.put("rockabilly", "spotify:playlist:37i9dQZF1DX0xLQsW8b5Zx");
+    map.put("rocksteady", "spotify:playlist:37i9dQZF1DXcYHsRTcIw5a");
+    map.put("romantic classical", "spotify:playlist:786hH2BXw7n4SNg0MXuAio");
+    map.put("roots reggae", "spotify:playlist:53iDeoyHodextygU8wpras");
+    map.put("rumba", "spotify:playlist:4QeTqdJtrfLLGT9vzqPCSX");
+    map.put("ryūkōka", "spotify:playlist:5qDufC8I9t3EVumsy0ZRAR");
+    map.put("salsa", "spotify:playlist:37i9dQZF1DX7SeoIaFyTmA");
+    map.put("samba", "spotify:playlist:2iiljY2f8tADeNzfQLUDWi");
+    map.put("schlager", "spotify:playlist:1J2vYkrZaRh9mPoRAiVVmU");
+    map.put("screamo", "spotify:playlist:37i9dQZF1DX8sGALGjOrTu");
+    map.put("shibuya-kei", "spotify:playlist:5wuLaZucmCLqdXF7CvsCo2");
+    map.put("shoegaze", "spotify:playlist:37i9dQZF1DX6ujZpAN0v9r");
+    map.put("singer-songwriter", "spotify:playlist:37i9dQZF1DWVHi578arQLF");
+    map.put("ska", "spotify:playlist:6mRRGF4klfgUzbD2ZKOCq0");
+    map.put("ska punk", "spotify:playlist:5NmTCJa0Wx4urcsYYEhaaj");
+    map.put("skacore", "spotify:playlist:5U5GURR1JQnlJKwmnHkWJO");
+    map.put("slow waltz", "spotify:playlist:5fI9FCkOfVpJs19hGUwsNv");
+    map.put("sludge metal", "spotify:playlist:3kbzqWhOrhZFXME9PpL8dg");
+    map.put("smooth jazz", "spotify:playlist:37i9dQZF1DXdwTUxmGKrdN");
+    map.put("smooth soul", "spotify:playlist:4RwKm6R88xEx1ScjWhtByA");
+    map.put("soca", "spotify:playlist:6ADEIhrQYjvSrvL8Wo9rHK");
+    map.put("soft rock", "spotify:playlist:37i9dQZF1DX6xOPeSOGone");
+    map.put("son cubano", "spotify:playlist:3DZYs9PjtavyPR5CBj4gB0");
+    map.put("son montuno", "spotify:playlist:2myAwVZH0I2Q3Tzvzj0ml7");
+    map.put("soul", "spotify:playlist:37i9dQZF1DWULEW2RfoSCi");
+    map.put("soul jazz", "spotify:playlist:5jBndFJwNAKyLHVjwhDiql");
+    map.put("southern rock", "spotify:playlist:1QKiEzhqqKwjsFQWuLPhmw");
+    map.put("southern soul", "spotify:playlist:2lFMAUSybNcIKKpf7akny8");
   }
 
     @Override
@@ -500,59 +502,9 @@ public class MusicBrowser extends AppCompatActivity {
       artistName = (TextView) findViewById(R.id.artist);
       songDuration = (ProgressBar) findViewById(R.id.songDuration);
       genrePlaying = (TextView) findViewById(R.id.genrePlaying);
+      albumImage = (ImageView) findViewById(R.id.imageView);
       fillMusicMap(AllSet.music);
       Log.d("MusicBrowser", String.valueOf(AllSet.music));
-      //capitalizing so it matches music map keys
-      for (String word : AllSet.genre10) {
-        if (word.contains(" ")) {
-          String[] words = word.split(" ");
-          for (int n = 0; n < words.length; n++) {
-            words[n] = words[n].substring(0,1).toUpperCase() + word.substring(1);
-          }
-        } else {
-          word = word.substring(0,1).toUpperCase() + word.substring(1);
-        }
-      }
-      for (String word : AllSet.genre5) {
-        if (word.contains(" ")) {
-          String[] words = word.split(" ");
-          for (int n = 0; n < words.length; n++) {
-            words[n] = words[n].substring(0,1).toUpperCase() + word.substring(1);
-          }
-        } else {
-          word = word.substring(0,1).toUpperCase() + word.substring(1);
-        }
-      }
-      for (String word : AllSet.genreNorm) {
-        if (word.contains(" ")) {
-          String[] words = word.split(" ");
-          for (int n = 0; n < words.length; n++) {
-            words[n] = words[n].substring(0,1).toUpperCase() + word.substring(1);
-          }
-        } else {
-          word = word.substring(0,1).toUpperCase() + word.substring(1);
-        }
-      }
-      for (String word : AllSet.genreN5) {
-        if (word.contains(" ")) {
-          String[] words = word.split(" ");
-          for (int n = 0; n < words.length; n++) {
-            words[n] = words[n].substring(0,1).toUpperCase() + word.substring(1);
-          }
-        } else {
-          word = word.substring(0,1).toUpperCase() + word.substring(1);
-        }
-      }
-      for (String word : AllSet.genreN10) {
-        if (word.contains(" ")) {
-          String[] words = word.split(" ");
-          for (int n = 0; n < words.length; n++) {
-            words[n] = words[n].substring(0,1).toUpperCase() + word.substring(1);
-          }
-        } else {
-          word = word.substring(0,1).toUpperCase() + word.substring(1);
-        }
-      }
     }
 
     @Override
@@ -598,9 +550,19 @@ public class MusicBrowser extends AppCompatActivity {
             songTitle.setText(track.name);
             artistName.setText(track.artist.name);
             genrePlaying.setText("Playing: " + genre);
+
+            if (QuestionsStart.MoodTracker > 10.00) {
+                albumImage.setImageResource(R.drawable.music10);
+            } else if (QuestionsStart.MoodTracker > -5.00) {
+                albumImage.setImageResource(R.drawable.musicnorm);
+            } else {
+                albumImage.setImageResource(R.drawable.musicn10);
+            }
+
             int trackDuration = (int) (track.duration/1000);
             songDuration.setMax(trackDuration);
             songDuration.setProgress(0);
+
             new Thread(new Runnable() {
               @Override
               public void run() {
