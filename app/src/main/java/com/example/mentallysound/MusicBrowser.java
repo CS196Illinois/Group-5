@@ -23,7 +23,6 @@ import java.util.Random;
 
 
 public class MusicBrowser extends AppCompatActivity {
-
     private static final String CLIENT_ID = "39914e12eddd4bdf83e4f0ba4104727c";
     private static final String REDIRECT_URI = "http://yoursite.com";
     private SpotifyAppRemote mSpotifyAppRemote;
