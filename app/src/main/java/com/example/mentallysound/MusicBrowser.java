@@ -110,7 +110,7 @@ public class MusicBrowser extends AppCompatActivity {
     map.put("brokenbeat", "spotify:playlist:2b8IUBxy00wteVzPCpiLbn");
     map.put("brostep", "spotify:playlist:4e1TfVuPeumCSZoA8KRq48");
     map.put("brutal death metal", "spotify:playlist:5iZh1symrVbgqWNwXACTZ2");
-    map.put("bubblegum Pop", "spotify:playlist:1pzWKmDCTcDGBQUyYdi8c3");
+    map.put("bubblegum pop", "spotify:playlist:1pzWKmDCTcDGBQUyYdi8c3");
     map.put("cajun", "spotify:playlist:2KmefvmYGgMH8fvkHLWHse");
     map.put("calypso", "spotify:playlist:1UmzDFJhtZvo9yGjxcfnz0");
     map.put("candombe", "spotify:playlist:6zT60dPcpA3v83eoOVcqZG");
