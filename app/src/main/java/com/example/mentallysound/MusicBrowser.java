@@ -18,6 +18,7 @@ import com.spotify.protocol.client.Subscription;
 import com.spotify.protocol.types.PlayerState;
 import com.spotify.protocol.types.Track;
 
+import java.net.URI;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
@@ -539,6 +540,9 @@ public class MusicBrowser extends AppCompatActivity {
       String genre = AllSet.generateGenre(QuestionsStart.MoodTracker);
       Log.d("MusicBrowser", genre + ": " + AllSet.music.get(genre));
       String playlistURI = AllSet.music.get(genre);
+      if (playlistURI == null) {
+          playlistURI = "spotify:playlist:0vvXsWCC9xrXsKd4FyS8kM";
+      }
       mSpotifyAppRemote.getPlayerApi().play(playlistURI);
 
       // Subscribe to PlayerState
