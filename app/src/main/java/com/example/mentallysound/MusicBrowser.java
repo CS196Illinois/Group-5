@@ -493,6 +493,19 @@ public class MusicBrowser extends AppCompatActivity {
     map.put("soul jazz", "spotify:playlist:5jBndFJwNAKyLHVjwhDiql");
     map.put("southern rock", "spotify:playlist:1QKiEzhqqKwjsFQWuLPhmw");
     map.put("southern soul", "spotify:playlist:2lFMAUSybNcIKKpf7akny8");
+    map.put("space age pop", "spotify:playlist:3u0DDEtIpt78wsMjei5vEo");
+    map.put("space rock", "spotify:playlist:3FnGA7QZoIaEkTPensobDS");
+    map.put("speed garage", "spotify:playlist:3gatfQHhLcZJIRIDwyEqB7");
+    map.put("speed metal", "spotify:playlist:1REn1DbDB5SwaHTY6Dj53V");
+    map.put("spoken word", "spotify:playlist:0dukhbpXBPXzYuFwz30DIl");
+    map.put("steampunk", "spotify:playlist:37i9dQZF1DWULEW2RfoSCi");
+    map.put("stoner metal", "spotify:playlist:2OOarnLNBNgkHMbT3rgUCJ");
+    map.put("stoner rock", "spotify:playlist:37i9dQZF1DXdpVGstUksUC");
+    map.put("street punk", "spotify:playlist:2II9QeiylOTKP7zVNEa4f3");
+    map.put("surf rock", "spotify:playlist:37i9dQZF1DWYzpSJHStHHx");
+    map.put("swamp pop", "spotify:playlist:4d2eI8uEgAIqKCmb8Hxwij");
+    map.put("swamp rock", "spotify:playlist:0O1NlowBgmMbKMcCcHxZCq");
+    map.put("swing", "spotify:playlist:2VMD3Kun96CVnYdog9MooY");
   }
 
     @Override
