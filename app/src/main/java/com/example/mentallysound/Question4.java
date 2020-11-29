@@ -34,6 +34,9 @@ public class Question4 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 QuestionsStart.MoodTracker += 4;
+                QuestionsStart.effectArray[0] -= 1.0;
+                QuestionsStart.effectArray[1] -= 1.0;
+                QuestionsStart.effectArray[2] -= 1.0;
                 Intent intent = new Intent(Question4.this, MusicBrowser.class);
                 startActivity(intent);
             }
@@ -43,6 +46,9 @@ public class Question4 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 QuestionsStart.MoodTracker -= 4;
+                QuestionsStart.effectArray[0] += 1.0;
+                QuestionsStart.effectArray[1] += 1.0;
+                QuestionsStart.effectArray[2] += 1.0;
                 Intent intent = new Intent(Question4.this, MusicBrowser.class);
                 startActivity(intent);
             }

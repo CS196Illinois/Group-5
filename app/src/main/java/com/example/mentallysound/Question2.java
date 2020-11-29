@@ -36,6 +36,7 @@ public class Question2 extends AppCompatActivity {
             public void onClick(View view) {
                 //if they are less stressed they wouldn't mind something more energetic
                 QuestionsStart.MoodTracker *= 1.25;
+                QuestionsStart.effectArray[1] += 1.0;
                 Intent intent = new Intent(Question2.this, Question3.class);
                 startActivity(intent);
             }
@@ -46,6 +47,7 @@ public class Question2 extends AppCompatActivity {
             public void onClick(View view) {
                 //if they are more stressed they would want something more calm and neutral
                 QuestionsStart.MoodTracker *= 0.75;
+                QuestionsStart.effectArray[1] -= 1.0;
                 Intent intent = new Intent(Question2.this, Question3.class);
                 startActivity(intent);
             }

@@ -34,6 +34,7 @@ public class Question3 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 QuestionsStart.MoodTracker += 2;
+                QuestionsStart.effectArray[2] -= 0.6;
                 Intent intent = new Intent(Question3.this, Question4.class);
                 startActivity(intent);
             }
@@ -43,6 +44,7 @@ public class Question3 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 QuestionsStart.MoodTracker -= 2;
+                QuestionsStart.effectArray[2] += 0.6;
                 Intent intent = new Intent(Question3.this, Question4.class);
                 startActivity(intent);
             }

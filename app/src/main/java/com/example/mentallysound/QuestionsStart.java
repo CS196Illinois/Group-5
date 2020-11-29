@@ -15,6 +15,7 @@ public class QuestionsStart extends AppCompatActivity {
     //simple algo to track mood. this is the simple way out of the two that we discussed
     //using the Circumplex Model ideally, but linear for now. based on questions, this will change.
     public static double MoodTracker;
+    public static double[] effectArray = new double[]{0.0, 0.0, 0.0};
 
     public Button continueStart;
     @Override

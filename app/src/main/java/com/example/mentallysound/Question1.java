@@ -40,6 +40,9 @@ public class Question1 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 QuestionsStart.MoodTracker += 5;
+                QuestionsStart.effectArray[0] -= 1.0; //Depression element of effect array
+                QuestionsStart.effectArray[1] -= 0.5; //Stress element of effect array
+                QuestionsStart.effectArray[2] -= 0.5; //Anxiety element of effect array
                 //QuestionsStart.moodMap.put("happy", QuestionsStart.moodMap.get("happy") + 5);
                 Intent intent = new Intent(Question1.this, Question2.class);
                 startActivity(intent);
@@ -50,6 +53,9 @@ public class Question1 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 QuestionsStart.MoodTracker += -3.33;
+                QuestionsStart.effectArray[0] += 1.0;
+                QuestionsStart.effectArray[1] += 0.5;
+                QuestionsStart.effectArray[2] += 0.5;
                 //QuestionsStart.moodMap.put("sad", QuestionsStart.moodMap.get("normal") + 5);
                 Intent intent = new Intent(Question1.this, Question2.class);
                 startActivity(intent);
@@ -60,6 +66,9 @@ public class Question1 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 QuestionsStart.MoodTracker += -6.66;
+                QuestionsStart.effectArray[0] += 0.5;
+                QuestionsStart.effectArray[1] += 1.0;
+                QuestionsStart.effectArray[2] += 0.75;
                 //QuestionsStart.moodMap.put("angry", QuestionsStart.moodMap.get("angry") + 5);
                 Intent intent = new Intent(Question1.this, Question2.class);
                 startActivity(intent);
