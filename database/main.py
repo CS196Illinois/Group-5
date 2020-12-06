@@ -1,6 +1,7 @@
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
+import json
 
 cred = credentials.Certificate('cs196-project-af7eb-1dce14b359a5.json')
 firebase_admin.initialize_app(cred)
@@ -10,6 +11,7 @@ genres = data.split("\n")
 #print(genres[0])
 
 db = firestore.client()
+list = []
 for i in genres:
     """doc_ref = db.collection(u'genres').document(i)
     doc_ref.set({
@@ -20,14 +22,14 @@ for i in genres:
         "ambient": 6,
         "chill": 6,
         "classical": 8,
-        "jazz": 10
+        "jazz": 8
     }
     relax = {
         "classical": 8,
         "ambient": 6,
         "piano": 10,
         "country": 8,
-        "jazz": 8,
+        "jazz": 6,
         "soft rock": 4,
         "soca": 4,
         "reggae": 4,
@@ -36,8 +38,8 @@ for i in genres:
     motivate = {
         "rock": 6,
         "pop": 8,
-        "hip": 10,
-        "rap": 10
+        "hip": 8,
+        "rap": 8
     }
     please = {
         "electro": 4,
@@ -113,4 +115,7 @@ for i in genres:
         "negative": negative,
         "negative values": negativeValues
     }
-    print(genreDict)
+    list.append(genreDict)
+
+with open("genresForSorting.json", "w") as outfile:
+    json.dump(list, outfile)

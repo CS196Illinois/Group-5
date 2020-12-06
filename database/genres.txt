@@ -32,60 +32,60 @@ avant-garde jazz
 avant-garde metal
 avant-garde pop
 avant-prog
-bachata //NOT INCLUDED YET
+bachata
 ballad
 barbershop
-baroque //NOT INCLUDED YET
+baroque
 bass house
 beat music
-bebop //NOT INCLUDED YET
+bebop
 bhangra
 big band
 big beat
 black metal
 blackened death metal
 blackgaze
-blue-eyed soul //NOT INCLUDED YET
-bluegrass //NOT INCLUDED YET
+blue-eyed soul
+bluegrass
 blues
 blues rock
-bolero //NOT INCLUDED YET
-bolero son //NOT INCLUDED YET
-bongo flava //NOT INCLUDED YET
+bolero
+bolero son
+bongo flava
 boogie rock
 boogie-woogie
-boom bap //NOT INCLUDED YET
-bossa nova //NOT INCLUDED YET
+boom bap
+bossa nova
 bounce
 breakbeat
 breakbeat hardcore
 breakcore
-breaks //NOT INCLUDED YET
+breaks
 britpop
 broken beat
-brostep //NOT INCLUDED YET
+brostep
 brutal death metal
 bubblegum pop
-cajun //NOT INCLUDED YET
-calypso //NOT INCLUDED YET
-candombe //NOT INCLUDED YET
-canterbury scene //NOT INCLUDED YET
-cantopop //NOT INCLUDED YET
+cajun
+calypso
+candombe
+canterbury scene
+cantopop
 carnatic classical
-celtic //NOT INCLUDED YET
-celtic punk //NOT INCLUDED YET
+celtic
+celtic punk
 chachachá
 chamber pop
-champeta //NOT INCLUDED YET
-changüí //NOT INCLUDED YET
+champeta
+changüí
 chanson
 chicago blues
 chillout
-chiptune //NOT INCLUDED YET
-chopped and screwed //NOT INCLUDED YET
+chiptune
+chopped and screwed
 christian rock
 christmas music
-chutney //NOT INCLUDED YET
+chutney
 city pop
 classic blues
 classic country
@@ -96,8 +96,8 @@ classical crossover
 club
 comedy
 comedy rock
-compas //NOT INCLUDED YET
-complextro //NOT INCLUDED YET
+compas
+complextro
 conscious hip hop
 contemporary christian
 contemporary classical
@@ -105,26 +105,26 @@ contemporary folk
 contemporary gospel
 contemporary jazz
 contemporary r&b
-contra //NOT INCLUDED YET
+contra
 cool jazz
 country
 country blues
 country folk
 country pop
 country rock
-coupé-décalé //NOT INCLUDED YET
-cowpunk //NOT INCLUDED YET
+coupé-décalé
+cowpunk
 crossover prog
 crust punk
-cumbia //NOT INCLUDED YET
-cumbia villera //NOT INCLUDED YET
-cyberpunk //NOT INCLUDED YET
-d-beat //NOT INCLUDED YET
+cumbia
+cumbia villera
+cyberpunk
+d-beat
 dance
 dance-pop
 dance-punk
 dancehall
-dansband //NOT INCLUDED YET
+dansband
 dark ambient
 dark electro
 dark folk
@@ -136,7 +136,7 @@ deathgrind
 deathrock
 deep house
 delta blues
-descarga //NOT INCLUDED YET
+descarga
 desert rock
 detroit techno
 digital hardcore
@@ -145,16 +145,16 @@ doo-wop
 doom metal
 downtempo
 dream pop
-drill //NOT INCLUDED YET
-drill and bass //NOT INCLUDED YET
-drone //NOT INCLUDED YET
-drum and bass //NOT INCLUDED YET
+drill
+drill and bass
+drone
+drum and bass
 dub
 dub techno
 dubstep
 dungeon synth
 east coast hip hop
-ebm //NOT INCLUDED YET
+ebm
 edm
 electric blues
 electro
@@ -165,71 +165,71 @@ electro-industrial
 electroclash
 electronic
 electronic rock
-electronica //NOT INCLUDED YET
-electronicore //NOT INCLUDED YET
+electronica
+electronicore
 electropop
 electropunk
 emo
 emo pop
 emocore
-enka //NOT INCLUDED YET
-ethereal //NOT INCLUDED YET
-euro house //NOT INCLUDED YET
-eurobeat //NOT INCLUDED YET
-eurodance //NOT INCLUDED YET
+enka
+ethereal
+euro house
+eurobeat
+eurodance
 europop
-exotica //NOT INCLUDED YET
-experimental //NOT INCLUDED YET
-experimental rock //NOT INCLUDED YET
-fado //NOT INCLUDED YET
-filk //NOT INCLUDED YET
-flamenco //NOT INCLUDED YET
+exotica
+experimental
+experimental rock
+fado
+filk
+flamenco
 folk
 folk metal
 folk pop
 folk punk
 folk rock
 folktronica
-freak folk //NOT INCLUDED YET
-free improvisation //NOT INCLUDED YET
+freak folk
+free improvisation
 free jazz
 funk
-funk carioca //NOT INCLUDED YET
+funk carioca
 funk metal
 funk rock
 funk soul
 funky house
 fusion
-future bass //NOT INCLUDED YET
-future garage //NOT INCLUDED YET
-future jazz //NOT INCLUDED YET
+future bass
+future garage
+future jazz
 futurepop
 g-funk
-gabber //NOT INCLUDED YET
-gangsta rap //NOT INCLUDED YET
-garage //NOT INCLUDED YET
-garage house //NOT INCLUDED YET
-garage punk //NOT INCLUDED YET
-garage rock //NOT INCLUDED YET
+gabber
+gangsta rap
+garage
+garage house
+garage punk
+garage rock
 glam
 glam metal
 glam rock
-glitch //NOT INCLUDED YET
-goa trance //NOT INCLUDED YET
+glitch
+goa trance
 goregrind
 gospel
 gothic
 gothic metal
 gothic rock
-grebo //NOT INCLUDED YET
+grebo
 grime
 grindcore
 groove metal
 group sounds
 grunge
-guaguancó //NOT INCLUDED YET
-guajira //NOT INCLUDED YET
-guaracha //NOT INCLUDED YET
+guaguancó
+guajira
+guaracha
 happy hardcore
 hard bop
 hard house
@@ -254,8 +254,8 @@ hopepunk
 horror punk
 horrorcore
 house
-idm //NOT INCLUDED YET
-illbient //NOT INCLUDED YET
+idm
+illbient
 indie
 indie folk
 indie pop
@@ -280,33 +280,33 @@ jazz fusion
 jazz rap
 jazz rock
 jazz-funk
-joik  //NOT INCLUDED YET
-jungle  //NOT INCLUDED YET
+joik
+jungle
 k-pop
 kawaii metal
-kayōkyoku  //NOT INCLUDED YET
-kizomba  //NOT INCLUDED YET
-klezmer  //NOT INCLUDED YET
-krautrock  //NOT INCLUDED YET
+kayōkyoku
+kizomba
+klezmer
+krautrock
 latin
 latin jazz
 latin pop
 latin rock
-leftfield  //NOT INCLUDED YET
+leftfield
 line dance
 lo-fi
 lo-fi hip hop
 lounge
 lovers rock
-luk krung  //NOT INCLUDED YET
-luk thung  //NOT INCLUDED YET
-madchester  //NOT INCLUDED YET
+luk krung
+luk thung
+madchester
 mainstream rock
-maloya  //NOT INCLUDED YET
-mambo  //NOT INCLUDED YET
+maloya
+mambo
 mandopop
 martial industrial
-maskanda  //NOT INCLUDED YET
+maskanda
 math rock
 mathcore
 medieval
@@ -315,15 +315,15 @@ melodic death metal
 melodic metalcore
 melodic rock
 melodic trance
-mento  //NOT INCLUDED YET
-merengue  //NOT INCLUDED YET
+mento
+merengue
 metal
 metalcore
 miami bass
 microhouse
-milonga  //NOT INCLUDED YET
-min'yō  //NOT INCLUDED YET
-mincecore  //NOT INCLUDED YET
+milonga
+min'yō
+mincecore
 minimal
 minimal techno
 minimal wave
@@ -331,43 +331,43 @@ modern blues
 modern classical
 modern country
 motown
-mpb  //NOT INCLUDED YET
+mpb
 musical
-neo soul  //NOT INCLUDED YET
+neo soul
 neo-progressive rock
-neo-rockabilly  //NOT INCLUDED YET
+neo-rockabilly
 neo-traditional country
 neofolk
-nerdcore  //NOT INCLUDED YET
-neurofunk  //NOT INCLUDED YET
-new age  //NOT INCLUDED YET
-new jack swing  //NOT INCLUDED YET
-new romantic  //NOT INCLUDED YET
-new wave  //NOT INCLUDED YET
+nerdcore
+neurofunk
+new age
+new jack swing
+new romantic
+new wave
 nightcore
-no wave  //NOT INCLUDED YET
+no wave
 noise
 noise pop
 noise rock
 noisecore
-non-music  //NOT INCLUDED YET
-norteño  //NOT INCLUDED YET
-northern soul  //NOT INCLUDED YET
+non-music
+norteño
+northern soul
 nu disco
 nu jazz
 nu metal
-nueva canción  //NOT INCLUDED YET
-occult rock  //NOT INCLUDED YET
-oi //NOT INCLUDED YET
-old school death metal //NOT INCLUDED YET
-old-time //NOT INCLUDED YET
-opera //NOT INCLUDED YET
+nueva canción
+occult rock
+oi
+old school death metal
+old-time
+opera
 orchestral
-outlaw country //NOT INCLUDED YET
+outlaw country
 p-funk
-pachanga //NOT INCLUDED YET
-pagode //NOT INCLUDED YET
-phonk //NOT INCLUDED YET
+pachanga
+pagode
+phonk
 polka
 pop
 pop metal
@@ -375,7 +375,7 @@ pop punk
 pop rap
 pop rock
 pop soul
-pornogrind //NOT INCLUDED YET
+pornogrind
 post-bop
 post-classical
 post-grunge
@@ -387,70 +387,70 @@ power electronics
 power metal
 power pop
 powerviolence
-production music //NOT INCLUDED YET
-progressive //NOT INCLUDED YET
+production music
+progressive
 progressive folk
 progressive house
 progressive metal
 progressive rock
 progressive trance
-psy-trance //NOT INCLUDED YET
-psychedelic //NOT INCLUDED YET
-psychedelic folk //NOT INCLUDED YET
+psy-trance
+psychedelic
+psychedelic folk
 psychedelic pop
-psychedelic rock //NOT INCLUDED YET
-psychobilly //NOT INCLUDED YET
-psytrance //NOT INCLUDED YET
+psychedelic rock
+psychobilly
+psytrance
 punk
 punk rock
-qawwali //NOT INCLUDED YET
+qawwali
 queercore
 r&b
-ragga //NOT INCLUDED YET
-ragga hip-hop //NOT INCLUDED YET
-ragga jungle //NOT INCLUDED YET
-ragtime //NOT INCLUDED YET
-raï //NOT INCLUDED YET
-ranchera //NOT INCLUDED YET
+ragga
+ragga hip-hop
+ragga jungle
+ragtime
+raï
+ranchera
 rap rock
 rapcore
-rave //NOT INCLUDED YET
-red song //NOT INCLUDED YET
-reggae //NOT INCLUDED YET
-reggaeton //NOT INCLUDED YET
-rhythmic noise //NOT INCLUDED YET
-ritual ambient //NOT INCLUDED YET
+rave
+red song
+reggae
+reggaeton
+rhythmic noise
+ritual ambient
 rock
 rock and roll
-rockabilly //NOT INCLUDED YET
-rocksteady //NOT INCLUDED YET
-romantic classical //NOT INCLUDED YET
+rockabilly
+rocksteady
+romantic classical
 roots reggae
-rumba //NOT INCLUDED YET
-ryūkōka //NOT INCLUDED YET
+rumba
+ryūkōka
 salsa
 samba
-schlager //NOT INCLUDED YET
+schlager
 screamo
-shibuya-kei //NOT INCLUDED YET
-shoegaze //NOT INCLUDED YET
+shibuya-kei
+shoegaze
 singer-songwriter
-ska //NOT INCLUDED YET
-ska punk //NOT INCLUDED YET
-skacore //NOT INCLUDED YET
+ska
+ska punk
+skacore
 slow waltz
 sludge metal
 smooth jazz
 smooth soul
-soca //NOT INCLUDED YET
+soca
 soft rock
-son cubano //NOT INCLUDED YET
-son montuno //NOT INCLUDED YET
+son cubano
+son montuno
 soul
 soul jazz
-southern rock //NOT INCLUDED YET
-southern soul //NOT INCLUDED YET
-space age pop //end here
+southern rock
+southern soul
+space age pop
 space rock
 speed garage
 speed metal
