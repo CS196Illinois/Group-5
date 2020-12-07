@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -67,6 +68,7 @@ public class SignIn extends AppCompatActivity {
                             Toast.makeText(SignIn.this, "Logged in.", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(getApplicationContext(), QuestionsStart.class));
                         } else {
+                            Log.d("SignIn", task.getException().getMessage());
                             Toast.makeText(SignIn.this, "Error: Email or password is incorrect, or user does not already exist.", Toast.LENGTH_SHORT).show();
                             mEmail.getText().clear();
                             mPassword.getText().clear();

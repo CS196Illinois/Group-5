@@ -84,7 +84,6 @@ public class CreateAccount extends AppCompatActivity {
                 });
     }
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -107,7 +106,6 @@ public class CreateAccount extends AppCompatActivity {
                 CollectionReference reference = db.collection("users");
                 final Checker checkEmailInDb = new Checker(false);
 
-
                 //Create a Map of all the data of an user
                 final Map<String, Object> user = new HashMap<>();
                 mAuth = FirebaseAuth.getInstance();
@@ -129,13 +127,13 @@ public class CreateAccount extends AppCompatActivity {
                         if (!(confirmEmail.equals(email))) {
                             new SweetAlertDialog(CreateAccount.this, SweetAlertDialog.ERROR_TYPE)
                                     .setTitleText("Confirmation Email...")
-                                    .setContentText("The two emails you inputted are not the same.")
+                                    .setContentText("The two emails you inputted are not the same. Password must be >5 characters.")
                                     .show();
                             inputConfirmEmail.getText().clear();
                         } else if (!(isEmailGood(email))) {
                             new SweetAlertDialog(CreateAccount.this, SweetAlertDialog.ERROR_TYPE)
                                     .setTitleText("Email Invalid")
-                                    .setContentText("Please enter a valid email address.")
+                                    .setContentText("Please enter a valid email address. Password must be >5 characters.")
                                     .show();
                             inputEmail.getText().clear();
                             inputConfirmEmail.getText().clear();
@@ -155,11 +153,18 @@ public class CreateAccount extends AppCompatActivity {
                         } else if (result.equals("invalid")) {
                             new SweetAlertDialog(CreateAccount.this, SweetAlertDialog.ERROR_TYPE)
                                     .setTitleText("Email In Records.")
-                                    .setContentText("Please enter a valid email address.")
+                                    .setContentText("Please enter a valid email address. Password must be >5 characters.")
                                     .show();
                             inputEmail.getText().clear();
                             inputConfirmEmail.getText().clear();
-                        } else { //if the emails are valid continue
+                        } else if (password.length() < 6) {
+                            new SweetAlertDialog(CreateAccount.this, SweetAlertDialog.ERROR_TYPE)
+                              .setTitleText("Invalid Password.")
+                              .setContentText("Password must be >5 characters.")
+                              .show();
+                            inputPassword.getText().clear();
+                        } else {
+                            //if the emails are valid continue
                             user.put("id", 2);
                             user.put("name", name);
                             user.put("email", email);
@@ -179,8 +184,6 @@ public class CreateAccount extends AppCompatActivity {
                         }
                     }
                 });
-
-
                 }
 
         });

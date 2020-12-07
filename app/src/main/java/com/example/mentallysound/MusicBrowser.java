@@ -580,6 +580,7 @@ public class MusicBrowser extends AppCompatActivity {
             songDuration.setMax(trackDuration);
             songDuration.setProgress(0);
 
+            //this is where
             new Thread(new Runnable() {
               @Override
               public void run() {
