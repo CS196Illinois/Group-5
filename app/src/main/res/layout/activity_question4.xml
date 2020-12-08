@@ -22,33 +22,33 @@
 
     <Button
         android:id="@+id/meh4"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_marginBottom="200dp"
-        android:background="@drawable/meh"
+        android:background="@drawable/mehtwo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/sad4"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_marginTop="150dp"
-        android:layout_marginEnd="75dp"
-        android:layout_marginRight="75dp"
-        android:background="@drawable/sad"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/sadtwo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/happy4"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="75dp"
-        android:layout_marginLeft="75dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
         android:layout_marginTop="150dp"
-        android:background="@drawable/happy"
+        android:background="@drawable/happytwo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
