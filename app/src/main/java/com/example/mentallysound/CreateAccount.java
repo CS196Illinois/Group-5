@@ -153,16 +153,10 @@ public class CreateAccount extends AppCompatActivity {
                         } else if (result.equals("invalid")) {
                             new SweetAlertDialog(CreateAccount.this, SweetAlertDialog.ERROR_TYPE)
                                     .setTitleText("Email In Records.")
-                                    .setContentText("Please enter a valid email address. Password must be >5 characters.")
+                                    .setContentText("Please enter a valid email address. This email is in records.")
                                     .show();
                             inputEmail.getText().clear();
                             inputConfirmEmail.getText().clear();
-                        } else if (password.length() < 6) {
-                            new SweetAlertDialog(CreateAccount.this, SweetAlertDialog.ERROR_TYPE)
-                              .setTitleText("Invalid Password.")
-                              .setContentText("Password must be >5 characters.")
-                              .show();
-                            inputPassword.getText().clear();
                         } else {
                             //if the emails are valid continue
                             user.put("id", 2);
